@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://bmros1g0dvtoh"]
+
+[ext_resource type="Texture2D" uid="uid://dltigvju2niw8" path="res://assets/icon.svg" id="1_0e48y"]
+[ext_resource type="Script" uid="uid://cqcur1rm7433g" path="res://addons/dialogue_manager/nodes/actionable/dialogue_actionable_2d.gd" id="2_0e48y"]
+[ext_resource type="Resource" uid="uid://bmr4h21wuwh35" path="res://resources/dialouge/untitled.dialogue" id="3_epypp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_smi8u"]
+size = Vector2(154, 144.5)
+
+[node name="Node2D" type="Node2D" unique_id=988628577]
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=1439818524]
+position = Vector2(103, 101)
+texture = ExtResource("1_0e48y")
+
+[node name="DialogueActionable2D" type="Area2D" parent="." unique_id=346952521]
+script = ExtResource("2_0e48y")
+dialogue_resource = ExtResource("3_epypp")
+dialogue_cue = "start"
+metadata/_custom_type_script = "uid://cqcur1rm7433g"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DialogueActionable2D" unique_id=588653971]
+position = Vector2(102, 100.75)
+shape = SubResource("RectangleShape2D_smi8u")
+
+[node name="Button" type="Button" parent="." unique_id=1083286080]
+offset_left = 278.0
+offset_top = 120.0
+offset_right = 343.0
+offset_bottom = 151.0
+text = "Booton
+"
+
+[connection signal="pressed" from="Button" to="DialogueActionable2D" method="action"]
