@@ -163,6 +163,7 @@ scroll_active = false
 
 [node name="DialogueLabel" parent="Balloon/MarginContainer/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer" unique_id=1301798052 instance=ExtResource("2_a8ve6")]
 unique_name_in_owner = true
+editor_description = "Listen for the started typing signal to trigger new voice clips as dialogue progresses. "
 layout_mode = 2
 size_flags_vertical = 3
 text = "Dialogue..."
