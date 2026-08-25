@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://bgctbnfv742k6"]
+
+[ext_resource type="Script" uid="uid://b5vv1huurkck1" path="res://scripts/level_controller.gd" id="1_ck1eq"]
+[ext_resource type="Texture2D" uid="uid://1swo64sy84ip" path="res://assets/MainPizzaLocation.png" id="1_qxdt8"]
+[ext_resource type="Texture2D" uid="uid://bu7d75t8o4vbe" path="res://assets/PizzaMakingArea.png" id="2_4af4s"]
+[ext_resource type="Script" uid="uid://hf62y84lbrx7" path="res://scripts/camera_controller.gd" id="2_a7w0b"]
+[ext_resource type="Script" uid="uid://d3chu6xx7ujdg" path="res://scripts/doorway_interact.gd" id="3_xic0v"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h0gde"]
+size = Vector2(24.723938, 175.46013)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xic0v"]
+size = Vector2(191.002, 149.28429)
+
+[node name="PizzaJointLocation" type="Node2D" unique_id=2035772544]
+script = ExtResource("1_ck1eq")
+
+[node name="MainPizzaLocation" type="Sprite2D" parent="." unique_id=1646540666]
+position = Vector2(586, 464.00003)
+scale = Vector2(2.445, 2.445)
+texture = ExtResource("1_qxdt8")
+
+[node name="Area2D" type="Area2D" parent="MainPizzaLocation" unique_id=664696895 node_paths=PackedStringArray("new_camera")]
+position = Vector2(228.62988, -2.862998)
+script = ExtResource("3_xic0v")
+new_camera = NodePath("../../Drinks")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MainPizzaLocation/Area2D" unique_id=368370558]
+shape = SubResource("RectangleShape2D_h0gde")
+
+[node name="MainLocation" type="Camera2D" parent="." unique_id=810336173]
+position = Vector2(576, 324)
+script = ExtResource("2_a7w0b")
+min_limit = Vector2(576, 324)
+max_limit = Vector2(597, 605)
+
+[node name="DrinksArea" type="Sprite2D" parent="." unique_id=1847311592]
+position = Vector2(2453, 450.00003)
+scale = Vector2(3.105645, 3.1056452)
+texture = ExtResource("2_4af4s")
+
+[node name="Area2D2" type="Area2D" parent="DrinksArea" unique_id=1371962245 node_paths=PackedStringArray("new_camera")]
+position = Vector2(-183.5367, 11.269792)
+scale = Vector2(0.787276, 0.78727597)
+script = ExtResource("3_xic0v")
+new_camera = NodePath("../../MainLocation")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DrinksArea/Area2D2" unique_id=1461281873]
+position = Vector2(-3.88562, 2.6584473)
+shape = SubResource("RectangleShape2D_xic0v")
+
+[node name="Drinks" type="Camera2D" parent="." unique_id=1495604287]
+position = Vector2(2080, 324)
+script = ExtResource("2_a7w0b")
+min_limit = Vector2(2080, 324)
+max_limit = Vector2(2825, 576)

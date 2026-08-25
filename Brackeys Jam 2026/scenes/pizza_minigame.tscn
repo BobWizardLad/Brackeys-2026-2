@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://pwi7g1yepf8d"]
+
+[ext_resource type="Texture2D" uid="uid://ban455jvvw5o3" path="res://assets/RawDough.png" id="1_b0wbf"]
+[ext_resource type="Texture2D" uid="uid://u4d80ugt8gds" path="res://assets/MetalCountertop.jpg" id="1_syphw"]
+[ext_resource type="Script" uid="uid://4eqmd636sx8x" path="res://scripts/rollable_dough.gd" id="2_g5dih"]
+[ext_resource type="Texture2D" uid="uid://cdf3ivtmslrw4" path="res://assets/PizzaDough.png" id="2_syphw"]
+[ext_resource type="Texture2D" uid="uid://cnm7hfyqeu585" path="res://assets/RollingPin.png" id="3_7xdo8"]
+[ext_resource type="Script" uid="uid://bbn5mn3uhxwgd" path="res://scripts/rolling_pin_object.gd" id="4_7xdo8"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7xdo8"]
+radius = 114.35
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3jjgn"]
+radius = 42.0
+height = 334.0
+
+[node name="PizzaMinigame" type="Node2D" unique_id=584060788]
+
+[node name="MetalCountertop" type="Sprite2D" parent="." unique_id=698525358]
+position = Vector2(584, 330)
+scale = Vector2(1.2204862, 1.2204862)
+texture = ExtResource("1_syphw")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1037536402]
+position = Vector2(361.99997, 437.99997)
+scale = Vector2(0.99999994, 0.99999994)
+script = ExtResource("2_g5dih")
+flattened_texture = ExtResource("2_syphw")
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D" unique_id=806278674]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_b0wbf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=900525329]
+shape = SubResource("CircleShape2D_7xdo8")
+
+[node name="RollingPinObject" type="Area2D" parent="." unique_id=1001255058 groups=["rolling_pin"]]
+position = Vector2(937, 118.99994)
+rotation = -0.7853982
+scale = Vector2(0.99999994, 0.99999994)
+script = ExtResource("4_7xdo8")
+
+[node name="RollingPin" type="Sprite2D" parent="RollingPinObject" unique_id=342043657]
+texture = ExtResource("3_7xdo8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RollingPinObject" unique_id=1025907009]
+position = Vector2(-12.020859, -0.7070632)
+rotation = -0.7853982
+shape = SubResource("CapsuleShape2D_3jjgn")
