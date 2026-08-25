@@ -2,5 +2,5 @@ extends Interact
 
 @export var target_scene_path: String = ""
 
-func click() -> void:
+func left_click_down() -> void:
     SCENE_TRANSITION.change_scene(target_scene_path)

@@ -22,7 +22,7 @@ func _ready() -> void:
 
 func _physics_process(_delta: float) -> void:
 	global_position = get_global_mouse_position()
-	# _check_for_grabbable_objects()
+	_check_for_interact_objects()
 	if held_object:
 		held_object.global_position = get_global_mouse_position() + mouse_offset
 
@@ -36,22 +36,13 @@ func _process(delta: float) -> void:
 	pass
 
 
-# func _check_for_grabbable_objects() -> void:
-# 	var overlapping_objects = object_detection.get_overlapping_areas()
+func _check_for_interact_objects() -> void:
+	var overlapping_objects = get_overlapping_areas()
 
-# 	if overlapping_objects.size() > 0:
-# 		if !held_object:
-# 			sprite.texture = open_hand_texture
-
-# 		# Sort descending so the highest z_index is first
-# 		overlapping_objects.sort_custom(func(a, b):
-# 			return a.z_index > b.z_index
-# 		)
-		
-# 		grabbable_object = overlapping_objects[0]
-# 		# Do your grab logic with topmost_object here
-# 	else:
-# 		sprite.texture = cursor_texture
+	if overlapping_objects.size() > 0:
+		sprite.texture = open_hand_texture
+	else:
+		sprite.texture = cursor_texture
 
 
 

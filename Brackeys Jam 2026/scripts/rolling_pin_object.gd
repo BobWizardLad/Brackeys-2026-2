@@ -1,1 +1,1 @@
-extends Area2D
+extends Draggable_Object

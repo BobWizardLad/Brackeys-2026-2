@@ -7,13 +7,18 @@ func _ready() -> void:
 
 func _area_entered(area: Area2D) -> void:
     if area is CursorScript:
-        area.left_click_down.connect(click)
+        area.left_click_down.connect(left_click_down)
+        area.left_click_up.connect(left_click_up)
 
 func _area_exited(area: Area2D) -> void:
     if area is CursorScript:
-        area.left_click_down.disconnect(click)
+        area.left_click_down.disconnect(left_click_down)
+        area.left_click_up.disconnect(left_click_up)
 
-func click() -> void:
+func left_click_down() -> void:
+    return
+
+func left_click_up() -> void:
     return
 
 
