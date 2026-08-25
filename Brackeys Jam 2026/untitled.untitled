@@ -1,0 +1,11 @@
+~ start
+Nathan: [[Hi|Hello|Howdy]], this is some dialogue. [ID:res://untitled.untitled_f16d27]
+Nathan: Here are some choices. [ID:res://untitled.untitled_73e8da]
+- First one [ID:res://untitled.untitled_e3974b]
+	Nathan: You picked the first one. [ID:res://untitled.untitled_720241]
+- Second one [ID:res://untitled.untitled_daa0ed]
+	Nathan: You picked the second one. [ID:res://untitled.untitled_efd17c]
+- Start again [ID:res://untitled.untitled_ec0453] => start
+- End the conversation [ID:res://untitled.untitled_29d76d] => END
+Nathan: For more information see the online documentation. [ID:res://untitled.untitled_7583ae]
+=> END
