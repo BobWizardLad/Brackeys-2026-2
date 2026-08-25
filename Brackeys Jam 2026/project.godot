@@ -17,6 +17,7 @@ config/icon="res://assets/icon.svg"
 [autoload]
 
 CURSOR="*uid://r5v6rorx0d7d"
+SCENE_TRANSITION="*uid://2eanck2m0l07"
 
 [display]
 

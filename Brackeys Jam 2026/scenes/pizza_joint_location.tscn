@@ -5,9 +5,13 @@
 [ext_resource type="Texture2D" uid="uid://bu7d75t8o4vbe" path="res://assets/PizzaMakingArea.png" id="2_4af4s"]
 [ext_resource type="Script" uid="uid://hf62y84lbrx7" path="res://scripts/camera_controller.gd" id="2_a7w0b"]
 [ext_resource type="Script" uid="uid://d3chu6xx7ujdg" path="res://scripts/doorway_interact.gd" id="3_xic0v"]
+[ext_resource type="Script" uid="uid://dquvef2yvkf2d" path="res://scripts/enter_new_scene_interact.gd" id="4_fubtq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h0gde"]
 size = Vector2(24.723938, 175.46013)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3jjgn"]
+size = Vector2(86.707565, 110.838455)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xic0v"]
 size = Vector2(191.002, 149.28429)
@@ -27,6 +31,14 @@ new_camera = NodePath("../../Drinks")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MainPizzaLocation/Area2D" unique_id=368370558]
 shape = SubResource("RectangleShape2D_h0gde")
+
+[node name="Area2D2" type="Area2D" parent="MainPizzaLocation" unique_id=767863440]
+position = Vector2(-62.167694, 9.815939)
+script = ExtResource("4_fubtq")
+target_scene_path = "res://scenes/pizza_minigame.tscn"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MainPizzaLocation/Area2D2" unique_id=1832520227]
+shape = SubResource("RectangleShape2D_3jjgn")
 
 [node name="MainLocation" type="Camera2D" parent="." unique_id=810336173]
 position = Vector2(576, 324)
