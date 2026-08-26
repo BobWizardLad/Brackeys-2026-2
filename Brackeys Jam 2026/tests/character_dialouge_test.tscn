@@ -1,11 +1,15 @@
 [gd_scene format=3 uid="uid://c77mcwypn2ch8"]
 
 [ext_resource type="PackedScene" uid="uid://c0xf764tvu8r1" path="res://scenes/character/character.tscn" id="1_7d6pa"]
-[ext_resource type="Resource" uid="uid://bmr4h21wuwh35" path="res://resources/dialouge/Detective.dialogue" id="3_3egnn"]
+[ext_resource type="Resource" uid="uid://dww2186wkabi0" path="res://resources/dialouge/ChapterZero.dialogue" id="2_3egnn"]
+[ext_resource type="Texture2D" uid="uid://dltigvju2niw8" path="res://assets/icon.svg" id="3_701ev"]
 
 [node name="CharacterDialougeTest" type="Node2D" unique_id=791168193]
 
 [node name="Character" parent="." unique_id=1751958569 instance=ExtResource("1_7d6pa")]
 position = Vector2(178, 150)
-dialogue_resource = ExtResource("3_3egnn")
-dialogue_cue = "first_chat"
+dialogue_resource = ExtResource("2_3egnn")
+dialogue_cue = "Beginning"
+
+[node name="Icon" type="Sprite2D" parent="Character" unique_id=984835909]
+texture = ExtResource("3_701ev")

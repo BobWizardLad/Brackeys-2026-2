@@ -42,6 +42,9 @@ Detective: Your evening depends on it
 => END
 
 ~ default_pizza
+Detective: Yea, pizza. You could use something like that to get someone to talk. Tell the REAL truth y'know?
+Roadie: How about you, feeling honest?
+Detective: I've been honest the whole time. Nothing new to say. Make another one for someone else
 => END
 
 ~ nothing_to_say
@@ -51,6 +54,11 @@ Detective: Well, get out there! You can do it kid
 => END
 
 ~ clear_robot
+Detective: Good start kid! We have a timeline for when Pepperoncini entered his office.
+Roadie: But he didn't do it...
+Detective: Doesn't seem like it, no! But! We still have evidence to dig into
+Detective: He was a bloody mess right? Go check for a weapon or a sign of what the weapon may have been
+Detective: You never know what a second look can dig up.
 => END
 
 ~ clear_harry
