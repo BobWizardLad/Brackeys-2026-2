@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=18
+type="Resource"
+uid="uid://sonxtq1uvff2"
+path="res://.godot/imported/Robot?.dialogue-fcccd3412b9f170a1a5bf925b1a71b50.tres"
+
+[deps]
+
+source_file="res://resources/dialouge/Robot?.dialogue"
+dest_files=["res://.godot/imported/Robot?.dialogue-fcccd3412b9f170a1a5bf925b1a71b50.tres"]
+
+[params]
+
+defaults=true
