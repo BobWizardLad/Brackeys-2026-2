@@ -54,6 +54,7 @@ Detective: Well, get out there! You can do it kid
 => END
 
 ~ clear_robot
+: Roadie fills in The Detective on what he knows and the Robot's story.
 Detective: Good start kid! We have a timeline for when Pepperoncini entered his office.
 Roadie: But he didn't do it...
 Detective: Doesn't seem like it, no! But! We still have evidence to dig into
@@ -62,6 +63,17 @@ Detective: You never know what a second look can dig up.
 => END
 
 ~ clear_harry
+: Roadie fills in The Detective on what he knows and the ordeal surrounding Harry
+Detective: Great Mary Joseph! You have a red handed culprit already? You are good at this kid
+Roadie: Yea, he admitted to it under very little pressure actually
+Detective: Well, if Harry was only an accessory like that he probably wanted to confess from the start
+Detective: Plus, if there was no struggle then why is the office all askew?
+Roadie: Because he died and I want to get out of here?
+Detective: No, that would never survive prosecution.
+Roadie: >=(
+Detective: Besides, it's just bad form as a detective to leave clues unexplained
+Detective: There may be more to this murder yet
+Detective: Try to uncover this whole bruise deal, get an explanation for that from the perp
 => END
 
 ~ clear_clown
