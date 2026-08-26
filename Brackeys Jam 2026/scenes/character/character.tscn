@@ -1,20 +1,32 @@
 [gd_scene format=3 uid="uid://c0xf764tvu8r1"]
 
 [ext_resource type="Texture2D" uid="uid://dltigvju2niw8" path="res://assets/icon.svg" id="1_cuyo6"]
+[ext_resource type="Script" uid="uid://d1837k3xowb4e" path="res://scripts/dialogue_interact.gd" id="1_mutn8"]
 [ext_resource type="Script" uid="uid://cqcur1rm7433g" path="res://addons/dialogue_manager/nodes/actionable/dialogue_actionable_2d.gd" id="2_mutn8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_smi8u"]
 size = Vector2(144, 144)
 
-[node name="Character" type="Node2D" unique_id=1442246310]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r2iom"]
+size = Vector2(138, 136)
+
+[node name="Character" type="Area2D" unique_id=1751958569]
+script = ExtResource("2_mutn8")
+metadata/_custom_type_script = "uid://cqcur1rm7433g"
 
 [node name="Sprite" type="Sprite2D" parent="." unique_id=38318652]
 texture = ExtResource("1_cuyo6")
 
-[node name="DialogueActionable2D" type="Area2D" parent="." unique_id=1649917259]
-script = ExtResource("2_mutn8")
-metadata/_custom_type_script = "uid://cqcur1rm7433g"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="DialogueActionable2D" unique_id=1367191582]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1367191582]
 position = Vector2(0, -1)
 shape = SubResource("RectangleShape2D_smi8u")
+
+[node name="DialogueInteract" type="Area2D" parent="." unique_id=329435777]
+script = ExtResource("1_mutn8")
+metadata/_custom_type_script = "uid://bstme3dsxbcrj"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DialogueInteract" unique_id=1771493397]
+position = Vector2(0, -1)
+shape = SubResource("RectangleShape2D_r2iom")
+
+[connection signal="clicked" from="DialogueInteract" to="." method="action"]
