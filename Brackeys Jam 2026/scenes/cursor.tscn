@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://r5v6rorx0d7d"]
+
+[ext_resource type="Script" uid="uid://ejbp1hycap1b" path="res://scripts/cursor.gd" id="1_ndevg"]
+[ext_resource type="Texture2D" uid="uid://di5d5axpcqwd4" path="res://assets/Cursor.png" id="1_s0nli"]
+[ext_resource type="Texture2D" uid="uid://cxpoefat1mf7t" path="res://assets/CursorHandOpen.png" id="2_ndevg"]
+[ext_resource type="Texture2D" uid="uid://dxg1l2j3r7jg7" path="res://assets/CursorHandClosed.png" id="4_n5qf0"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_h0gde"]
+radius = 15.0
+
+[node name="Cursor" type="Area2D" unique_id=1671796043]
+z_index = 1000
+script = ExtResource("1_ndevg")
+cursor_texture = ExtResource("1_s0nli")
+open_hand_texture = ExtResource("2_ndevg")
+closed_hand_texture = ExtResource("4_n5qf0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2067723935]
+shape = SubResource("CircleShape2D_h0gde")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1460848]
+position = Vector2(16, 16)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_s0nli")
