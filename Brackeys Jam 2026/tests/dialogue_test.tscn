@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://dltigvju2niw8" path="res://assets/icon.svg" id="1_0e48y"]
 [ext_resource type="Script" uid="uid://cqcur1rm7433g" path="res://addons/dialogue_manager/nodes/actionable/dialogue_actionable_2d.gd" id="2_0e48y"]
-[ext_resource type="Resource" uid="uid://bmr4h21wuwh35" path="res://resources/dialouge/untitled.dialogue" id="3_epypp"]
+[ext_resource type="Resource" uid="uid://bmr4h21wuwh35" path="res://resources/dialouge/Detective.dialogue" id="3_epypp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_smi8u"]
 size = Vector2(154, 144.5)
@@ -16,7 +16,7 @@ texture = ExtResource("1_0e48y")
 [node name="DialogueActionable2D" type="Area2D" parent="." unique_id=346952521]
 script = ExtResource("2_0e48y")
 dialogue_resource = ExtResource("3_epypp")
-dialogue_cue = "start"
+dialogue_cue = "nothing_to_say"
 metadata/_custom_type_script = "uid://cqcur1rm7433g"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DialogueActionable2D" unique_id=588653971]
