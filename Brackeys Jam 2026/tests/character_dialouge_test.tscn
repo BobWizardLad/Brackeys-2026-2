@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://c77mcwypn2ch8"]
 
 [ext_resource type="PackedScene" uid="uid://c0xf764tvu8r1" path="res://scenes/character/character.tscn" id="1_7d6pa"]
-[ext_resource type="Resource" uid="uid://b15ytfhosx35g" path="res://resources/dialouge/Harry.dialogue" id="2_3egnn"]
+[ext_resource type="Resource" uid="uid://byc4fxaco0utb" path="res://resources/dialouge/Robot.dialogue" id="2_3egnn"]
 [ext_resource type="Texture2D" uid="uid://dltigvju2niw8" path="res://assets/icon.svg" id="3_701ev"]
 
 [node name="CharacterDialougeTest" type="Node2D" unique_id=791168193]
@@ -9,7 +9,7 @@
 [node name="Character" parent="." unique_id=1751958569 instance=ExtResource("1_7d6pa")]
 position = Vector2(178, 150)
 dialogue_resource = ExtResource("2_3egnn")
-dialogue_cue = "default_pizza"
+dialogue_cue = "first_chat"
 
 [node name="Icon" type="Sprite2D" parent="Character" unique_id=984835909]
 texture = ExtResource("3_701ev")

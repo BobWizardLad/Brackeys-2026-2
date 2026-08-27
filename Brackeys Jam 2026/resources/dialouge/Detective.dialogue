@@ -13,34 +13,51 @@
 Roadie: Hey, you know a murder just occoured, right? What are you doing in here?
 ???: I know that, its why i'm here. I'm the detective on the-
 : . . .
+$> DialogueMoodManager.speaker_mood = DialogueMoodManager.MOOD.DISSAPOINTED
 Detective: Ouughh- On the case..
 Detective: But i'm afraid I made a mistake at lunch today
 Detective: I don't think i'll be out anytime tonight
 
+$> DialogueMoodManager.speaker_mood = DialogueMoodManager.MOOD.NEUTRAL
 Roadie: I'm the pizza guy that was working here tonight before the murder. Roadie.
 Detective: Nice to hear you Roadie. Though you may be working overtime tonight, no one gets out of here until we solve this case.
 Roadie: So i've heard
 Detective: I'm confined to the can for the forseeable future so that will take some time. Some way to spend my last day on the force...
 Detective: Hey, kid
+$> DialogueMoodManager.speaker_mood = DialogueMoodManager.MOOD.EXCITED
 Detective: I have an offer for you
 Roadie: What do you mean offer dude?
+$> DialogueMoodManager.speaker_mood = DialogueMoodManager.MOOD.NEUTRAL
 Detective: I'm stuck in here and wont be solving the mystery anytime soon. You flip pizzas right?
 Roadie: Pizzas, not burgers
 Roadie: But yea
 Detective: Whatever, whatever. Listen! I trust a pizza flipper only because pizza will turn any man honest when the pizza's made right
+$> DialogueMoodManager.speaker_mood = DialogueMoodManager.MOOD.DISSAPOINTED
 Detective: Everyone else: Scumbags. Liars. Can't trust em.
 Detective: Not even your own customers. Unless...
+$> DialogueMoodManager.speaker_mood = DialogueMoodManager.MOOD.EXCITED
 Detective: You can make some pizzas and get the truth!
 
+$> DialogueMoodManager.speaker_mood = DialogueMoodManager.MOOD.NEUTRAL
 Roadie: Listen, i'm not a detective. I just want to get off my shift on time
 Detective: That's the offer kid. Solve this and you get to go home
 
 Detective: I need you to resore rightful rigatoni to New Sokyo
-Roadie: There is no rigatoni in this town dude 
+Roadie: There is no rigatoni in this town dude
 Detective: Even so, you need to take this case
+$> DialogueMoodManager.speaker_mood = DialogueMoodManager.MOOD.DISSAPOINTED
 Detective: Your evening depends on it
+$> DialogueMoodManager.speaker_mood = DialogueMoodManager.MOOD.NEUTRAL
 Detective: Come talk to me again when you are ready to start
 => END
+
+~ tutorial
+Detective: Ok kid, make me a pizza
+Roadie: A pizza?
+Detective: yea, make me any pizza you fancy, i'm not picky
+Roadie: Is that what detectives do?
+Detective: It's what you'll do tonight! Pizza makes people honest. Remeber that!
+Dete
 
 ~ tutorial_pizza
 Detective: Perfect kid! I'm not picky but other customers will be. I'll give you all i've got since you brought me my favorite pizza
@@ -52,8 +69,10 @@ Roadie: ... Bolts?
 Detective: I have a hunch kid, just roll with me
 Detective: Everyone has a favorite topping
 Roadie: Like toilet bolts?
+$> DialogueMoodManager.speaker_mood = DialogueMoodManager.MOOD.DISSAPOINTED
 Detective: Who would eat a piece of metal kid? I don't know, give it a shot
 Roadie: You're the expert...
+$> DialogueMoodManager.speaker_mood = DialogueMoodManager.MOOD.NEUTRAL
 => END
 
 ~ default_pizza
