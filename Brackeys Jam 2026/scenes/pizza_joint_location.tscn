@@ -1,68 +1,131 @@
 [gd_scene format=3 uid="uid://bgctbnfv742k6"]
 
 [ext_resource type="Script" uid="uid://b5vv1huurkck1" path="res://scripts/level_controller.gd" id="1_ck1eq"]
-[ext_resource type="Texture2D" uid="uid://1swo64sy84ip" path="res://assets/MainPizzaLocation.png" id="1_qxdt8"]
-[ext_resource type="Texture2D" uid="uid://bu7d75t8o4vbe" path="res://assets/PizzaMakingArea.png" id="2_4af4s"]
-[ext_resource type="Script" uid="uid://hf62y84lbrx7" path="res://scripts/camera_controller.gd" id="2_a7w0b"]
+[ext_resource type="Texture2D" uid="uid://blim7ijkowy46" path="res://assets/Lobby 3D Perspective.png" id="2_fubtq"]
 [ext_resource type="Script" uid="uid://d3chu6xx7ujdg" path="res://scripts/doorway_interact.gd" id="3_xic0v"]
 [ext_resource type="Script" uid="uid://dquvef2yvkf2d" path="res://scripts/enter_new_scene_interact.gd" id="4_fubtq"]
+[ext_resource type="Texture2D" uid="uid://cesamo5n465jt" path="res://assets/MainRoom1.png" id="5_xic0v"]
+[ext_resource type="Texture2D" uid="uid://c2v6lk2il7250" path="res://assets/MainRoom2.png" id="6_drmyl"]
+[ext_resource type="Texture2D" uid="uid://bjte5gitbqftg" path="res://assets/MoveArrow.png" id="6_wphoq"]
+[ext_resource type="Texture2D" uid="uid://c57unhxm4htor" path="res://assets/Bathroom.png" id="7_wphoq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h0gde"]
-size = Vector2(24.723938, 175.46013)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_3jjgn"]
-size = Vector2(86.707565, 110.838455)
+size = Vector2(164.99995, 262.7965)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xic0v"]
-size = Vector2(191.002, 149.28429)
+size = Vector2(412.81522, 547.45734)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wphoq"]
+size = Vector2(109.99998, 116.00001)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f6ju0"]
+size = Vector2(80.0229, 110.50758)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_drmyl"]
+size = Vector2(273.09357, 373.43945)
 
 [node name="PizzaJointLocation" type="Node2D" unique_id=2035772544]
 script = ExtResource("1_ck1eq")
 
-[node name="MainPizzaLocation" type="Sprite2D" parent="." unique_id=1646540666]
-position = Vector2(586, 464.00003)
-scale = Vector2(2.445, 2.445)
-texture = ExtResource("1_qxdt8")
+[node name="Lobby" type="Sprite2D" parent="." unique_id=1646540666]
+position = Vector2(960, 540)
+texture = ExtResource("2_fubtq")
 
-[node name="Area2D" type="Area2D" parent="MainPizzaLocation" unique_id=664696895 node_paths=PackedStringArray("new_camera")]
+[node name="Camera" type="Camera2D" parent="Lobby" unique_id=810336173]
+
+[node name="Area2D" type="Area2D" parent="Lobby" unique_id=664696895 node_paths=PackedStringArray("new_camera")]
 position = Vector2(228.62988, -2.862998)
 script = ExtResource("3_xic0v")
-new_camera = NodePath("../../Drinks")
+new_camera = NodePath("../../MainArea1/Camera")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="MainPizzaLocation/Area2D" unique_id=368370558]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lobby/Area2D" unique_id=368370558]
+position = Vector2(-3.6298828, -31.137024)
 shape = SubResource("RectangleShape2D_h0gde")
 
-[node name="Area2D2" type="Area2D" parent="MainPizzaLocation" unique_id=767863440]
-position = Vector2(-62.167694, 9.815939)
+[node name="MainArea1" type="Sprite2D" parent="." unique_id=1847311592]
+position = Vector2(3100, 540)
+texture = ExtResource("5_xic0v")
+
+[node name="Camera" type="Camera2D" parent="MainArea1" unique_id=1495604287]
+
+[node name="Area2D2" type="Area2D" parent="MainArea1" unique_id=1371962245 node_paths=PackedStringArray("new_camera")]
+position = Vector2(-544.0001, 70.000015)
+scale = Vector2(0.787276, 0.78727597)
+script = ExtResource("3_xic0v")
+new_camera = NodePath("../../Lobby/Camera")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MainArea1/Area2D2" unique_id=1461281873]
+position = Vector2(1.9050293, -23.49878)
+scale = Vector2(1.0000007, 1)
+shape = SubResource("RectangleShape2D_xic0v")
+
+[node name="Area2D3" type="Area2D" parent="MainArea1" unique_id=204506205 node_paths=PackedStringArray("new_camera")]
+position = Vector2(850, 438.99997)
+script = ExtResource("3_xic0v")
+new_camera = NodePath("../../MainArea2/Camera")
+
+[node name="Sprite2D" type="Sprite2D" parent="MainArea1/Area2D3" unique_id=857776688]
+scale = Vector2(-1, 1)
+texture = ExtResource("6_wphoq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MainArea1/Area2D3" unique_id=1742478419]
+scale = Vector2(1.0000007, 1)
+shape = SubResource("RectangleShape2D_wphoq")
+
+[node name="MainArea2" type="Sprite2D" parent="." unique_id=1471950999]
+position = Vector2(5200, 540)
+texture = ExtResource("6_drmyl")
+
+[node name="Camera" type="Camera2D" parent="MainArea2" unique_id=1991939803]
+
+[node name="Area2D2" type="Area2D" parent="MainArea2" unique_id=1146595511]
+position = Vector2(-106.00007, -1.9999838)
+scale = Vector2(0.787276, 0.78727597)
 script = ExtResource("4_fubtq")
 target_scene_path = "res://scenes/pizza_minigame.tscn"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="MainPizzaLocation/Area2D2" unique_id=1832520227]
-shape = SubResource("RectangleShape2D_3jjgn")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MainArea2/Area2D2" unique_id=111362695]
+position = Vector2(1.2704775, -3.8106384)
+scale = Vector2(1.0000005, 1)
+shape = SubResource("RectangleShape2D_f6ju0")
 
-[node name="MainLocation" type="Camera2D" parent="." unique_id=810336173]
-position = Vector2(576, 324)
-script = ExtResource("2_a7w0b")
-min_limit = Vector2(576, 324)
-max_limit = Vector2(597, 605)
-
-[node name="DrinksArea" type="Sprite2D" parent="." unique_id=1847311592]
-position = Vector2(2453, 450.00003)
-scale = Vector2(3.105645, 3.1056452)
-texture = ExtResource("2_4af4s")
-
-[node name="Area2D2" type="Area2D" parent="DrinksArea" unique_id=1371962245 node_paths=PackedStringArray("new_camera")]
-position = Vector2(-183.5367, 11.269792)
+[node name="Area2D4" type="Area2D" parent="MainArea2" unique_id=1941080922 node_paths=PackedStringArray("new_camera")]
+position = Vector2(57.999947, -4.999984)
 scale = Vector2(0.787276, 0.78727597)
 script = ExtResource("3_xic0v")
-new_camera = NodePath("../../MainLocation")
+new_camera = NodePath("../../Restroom/Camera")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="DrinksArea/Area2D2" unique_id=1461281873]
-position = Vector2(-3.88562, 2.6584473)
-shape = SubResource("RectangleShape2D_xic0v")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MainArea2/Area2D4" unique_id=2074979439]
+position = Vector2(1.2704775, -3.8106384)
+scale = Vector2(1.0000005, 1)
+shape = SubResource("RectangleShape2D_f6ju0")
 
-[node name="Drinks" type="Camera2D" parent="." unique_id=1495604287]
-position = Vector2(2080, 324)
-script = ExtResource("2_a7w0b")
-min_limit = Vector2(2080, 324)
-max_limit = Vector2(2825, 576)
+[node name="Area2D3" type="Area2D" parent="MainArea2" unique_id=516403052 node_paths=PackedStringArray("new_camera")]
+position = Vector2(850, 438.99997)
+script = ExtResource("3_xic0v")
+new_camera = NodePath("../../MainArea1/Camera")
+
+[node name="Sprite2D" type="Sprite2D" parent="MainArea2/Area2D3" unique_id=793139046]
+scale = Vector2(-1, 1)
+texture = ExtResource("6_wphoq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MainArea2/Area2D3" unique_id=165998152]
+scale = Vector2(1.0000007, 1)
+shape = SubResource("RectangleShape2D_wphoq")
+
+[node name="Restroom" type="Sprite2D" parent="." unique_id=550089036]
+position = Vector2(960, 1700)
+texture = ExtResource("7_wphoq")
+
+[node name="Camera" type="Camera2D" parent="Restroom" unique_id=2107330729]
+
+[node name="Area2D2" type="Area2D" parent="Restroom" unique_id=1078446130 node_paths=PackedStringArray("new_camera")]
+position = Vector2(289.00012, 11.000016)
+scale = Vector2(0.787276, 0.78727597)
+script = ExtResource("3_xic0v")
+new_camera = NodePath("../../MainArea2/Camera")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Restroom/Area2D2" unique_id=1740129673]
+position = Vector2(3.175293, -27.944336)
+scale = Vector2(1.0000005, 1)
+shape = SubResource("RectangleShape2D_drmyl")
