@@ -39,6 +39,21 @@ Detective: I need you to resore rightful rigatoni to New Sokyo
 Roadie: There is no rigatoni in this town dude 
 Detective: Even so, you need to take this case
 Detective: Your evening depends on it
+Detective: Come talk to me again when you are ready to start
+=> END
+
+~ tutorial_pizza
+Detective: Perfect kid! I'm not picky but other customers will be. I'll give you all i've got since you brought me my favorite pizza
+Detective: I made a bit of an expedition
+Roadie: Out of the john?
+Detective: Just a stolen moment. But I found this!
+: A bucket of bolts slides out from under the stall
+Roadie: ... Bolts?
+Detective: I have a hunch kid, just roll with me
+Detective: Everyone has a favorite topping
+Roadie: Like toilet bolts?
+Detective: Who would eat a piece of metal kid? I don't know, give it a shot
+Roadie: You're the expert...
 => END
 
 ~ default_pizza
@@ -77,6 +92,7 @@ Detective: Try to uncover this whole bruise deal, get an explanation for that fr
 => END
 
 ~ clear_clown
+
 => END
 
 ~ clear_holmes
