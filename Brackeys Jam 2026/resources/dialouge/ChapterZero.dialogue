@@ -1,16 +1,16 @@
-~ Beginning
+~ beginning
 : New Sokyo, modern day, 2426.
 : Roadie was a plain, copy-paste pizza parlor cook
 : Clocking in to a regular Friday night at Mr. Pepperoncini's Pizza Parlor
 : Is what I would say if I wasn't about to narrate a story about murder, deception, and pizza toppings
 : But I am, and this was not going to be a regular Friday...
 
-~ Inside
+~ fisrt_visit_inside
 Roadie: Mr. P?
 : A camera lowers down from the ceiling. Mr. Pepperoncini's security system
 Roadie (mumbling): he must be in the office right now...
 
-~ PepperonciniCamera
+~ pepperoncini_camera
 Pepperoncini: Clock in Roadie, it's gonna be a long night
 Roadie: Right... Right away sir
 Pepperoncini: I'm gonna be handling the front of house until Allie comes in, alright?
@@ -25,7 +25,7 @@ $> DialogueMoodManager.speaker_mood = DialogueMoodManager.MOOD.EXCITED
 Pepperoncini: That's the spirit, go get em'
 $> DialogueMoodManager.speaker_mood = DialogueMoodManager.MOOD.NEUTRAL
 
-~ TimePassesWork
+~ time_passes
 : Time passes as the shift runs its course
 : ...
 : KYSHHHHH!!
@@ -33,7 +33,7 @@ $> DialogueMoodManager.speaker_mood = DialogueMoodManager.MOOD.NEUTRAL
 : ...
 : crash!
 
-~ FlashToKitchen
+~ end_of_the_shift
 Roadie: Pretty quiet night tonight, not bad
 Roadie: I think someone dropped a glass in the dining room or something though
 Roadie: I still need to talk to Mr. Pepperoncini about my two weeks notice
@@ -41,8 +41,7 @@ Roadie: This job just doesn't pay the bills anymore. I hardly get any hours...
 Roadie: Doesn't make the talk any less akward though
 Roadie: Here goes...
 
-~ FlashToDining
-~ FlashToOffice
+~ to_office
 Roadie: Mr. P?
 Roadie: Mr... Oh beans. OH BEANS MAN
 : Roadie had walked onto the scene of some kind of murder
@@ -50,10 +49,10 @@ Roadie: Mr... Oh beans. OH BEANS MAN
 : And a terrible bruise on his head
 Roadie: I-.. I have to call somebody!
 
-~ FadeToBlackMurder
+~ fade_to_black_cops
 : Roadie called the authorities...
 
-~ FadeToEntrance
+~ cops_at_entrance
 Cop: Well, it's pretty bad
 Roadie: I saw myself, it's awful
 Cop: No, my hopes for dinner. I was gonna bring a pizza home tonight but then this guy died in my favorite pizza joint

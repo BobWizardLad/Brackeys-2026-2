@@ -6,6 +6,12 @@ Roadie: Yea... Good luck
 Allie: You too
 => END
 
+~ default_pizza
+Allie: Thank you but i'm full, ate before my shift
+Roadie: See anything related to the case?
+Allie: Nothing comes to mind right now, let me know if you learn anything that might jog my memory
+=> END
+
 ~ nothing_to_say
 Allie: This is such a crazy night
 Roadie: Tell me about it...
