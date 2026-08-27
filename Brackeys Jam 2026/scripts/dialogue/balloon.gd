@@ -71,7 +71,7 @@ var mutation_cooldown: Timer = Timer.new()
 @onready var progress: Polygon2D = %Progress
 
 ## The speaking character portrait
-@onready var portrait: TextureRect = %Portrait
+@onready var portrait: Sprite2D = %Portrait
 
 func _ready() -> void:
 	balloon.hide()
