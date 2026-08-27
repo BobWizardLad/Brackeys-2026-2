@@ -35,8 +35,8 @@ size = Vector2(124, 138)
 [node name="PizzaMinigame" type="Node2D" unique_id=584060788]
 
 [node name="MetalCountertop" type="Sprite2D" parent="." unique_id=698525358]
-position = Vector2(584, 330)
-scale = Vector2(1.2204862, 1.2204862)
+position = Vector2(957.00006, 535)
+scale = Vector2(1.8619571, 1.8619571)
 texture = ExtResource("1_syphw")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1037536402]
@@ -117,7 +117,7 @@ texture = ExtResource("9_o30f0")
 shape = SubResource("RectangleShape2D_o30f0")
 
 [node name="ExitDoor" type="Area2D" parent="." unique_id=2114488517]
-position = Vector2(84, 562)
+position = Vector2(84, 975)
 script = ExtResource("10_m0jyh")
 target_scene_path = "res://scenes/pizza_joint_location.tscn"
 
