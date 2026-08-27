@@ -1,0 +1,30 @@
+~ first_dialogue
+Allie: I cannot believe that Mr. P is dead.
+Roadie: Yea, I know, it's a little surreal
+Allie: We are out of work after this then, huh?
+Roadie: Yea... Good luck
+Allie: You too
+=> END
+
+~ nothing_to_say
+Allie: This is such a crazy night
+Roadie: Tell me about it...
+=> END
+
+~ clear_robot
+Allie: The robot thing must have happened after I went to the bathroom right before my shift
+Roadie: Does that line up with you too?
+Allie: It does, Mr. P was in his office after I came out and started working
+Roadie: Okay
+Roadie: Did you see anything else related to the case?
+Allie: Only a tray of pineapple outside of the kitchen for some reason
+: Allie hands you A tray of tiny cubed pineapple chunks.
+Roadie: I had these in the fridge? Mr. P discontinued the pineapple pepperoncini pesto pizza last week.
+Allie: You didn't move them?
+Roadie: No, I don't think anyone was in the kitchen other than me tonight, but these are still cold in the middle.
+Allie: I don't want to point any fingers, but Harry used to have your job
+Roadie: Really? Did he bring his 'accessories' into work too
+Allie: Yea, part of why he got fired actually
+Roadie: I do believe that. This is something to go off of, thanks A.
+Roadie: Seeya around R.
+=> END

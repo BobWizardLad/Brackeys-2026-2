@@ -1,0 +1,101 @@
+~ first_dialogue
+???: Hey idiot.
+Roadie: ... Me?
+??: No someone else
+??: Yea you!
+????: Shut up both of you! Jeez
+Roadie: Who are you?
+Harry: I'm Harry. Just a dude that was getting dinner tonight before all this went down.
+Angel: C'mon Harry, tell the truth
+Devil: Yea, keep lying to him dude
+Roadie: Who are they?
+Harry: Annoying and Annoying Two
+Angel: Honored
+Devil: *Blows Raspberry*
+Harry: I have had these two on my shoulders my entire life. Can't remember a time without them
+Harry: My moral compass made manifest, even if they are like children
+Angel: I am much older than you young man
+Devil: Yea, granny over there is like, older than recorded history
+Angel: Older than two minutes unlike you, you pajama-clad manchild
+Devil: Don't pretend like you don't love it~
+Roadie: Are they always like this?
+Harry: Yea
+Roadie: Well i'm the detective on this case, i'll come back for questions real soon. Don't go anywhere
+Harry: I'll be around
+Angel: Ta-ta~
+Devil: Come back real soon~
+Roadie: ugh...
+=> END
+
+~ nothing_to_say
+Harry: Got any questions for us?
+Roadie: Not yet...
+Angel: Go away
+Devil: Bring me pizza servant!
+Roadie: Bye
+
+~ default_pizza
+Harry: This looks great!
+Angel: Ew.
+Devil: This sucks dude
+: The angel and devil throw the pizza across the parlor and back into the kitchen
+Roadie: Hey!
+Harry: sorry...
+Angel: Come back with real food next time
+Devil: Yea, make a real pizza idiot!
+=> END
+
+~ clear_robot
+Harry: I heard about the robot
+Roadie: Nothing conclusive yet, don't keep your hopes up-
+Angel: We are cleared right? The robot did it!
+Devil: Freedom! We can leave?
+Roadie: No. No suspect has been identified
+Roadie: Where were you three at 9:10?
+Angel: We were eating pizza in the dining room like little angels
+: Roadie raises his eyebrow at the angel and looks to the devil
+Devil: Would an angel lie? A widdle angel like that one over there?
+Angel: =)
+Roadie: Yes, actually. Especially that one.
+Devil: Well what if this wittle devil told you that I saw Harry go into the office and blow the guy up?
+Roadie: I'd say there were no signs of an explosion
+Harry: We were in here eating pizza all night, honest.
+Roadie: I'll be the judge of that one
+Angel: ...
+Devil: ...
+Harry: Bye
+=> END
+
+~ have_pineapple
+Devil: Ew dude, pineapple on pizza is stupid
+Angel: Disgraceful topping, can't believe you would own such a thing
+Roadie: Harry.
+Harry: Yea?
+Roadie: Have you been in the kitchen tonight?
+Harry: Not at all! Why do you ask?
+Roadie: I heard you had my job before me and I thought you might know your way around the kitchen
+Harry: I did work here before you. Doesn't mean I go snooping around like I own the pizza kitchen though
+Roadie: These two stay on your shoulder all the time? They don't wander?
+Harry: They vanish sometimes, but they are weird fairy creature things. They do that.
+Angel: Guilty as charged on that one your honor
+Devil: I prefer the term imp, but yea we do that
+Roadie: But they did work with you in that kitchen before, right?
+Angel: We did. Never leave his side, remember?
+Devil: Yea, loved working in that kitchen. Lots of toys back there!
+=> END
+
+~ pineapple_pizza
+Devil: We told you pineapple on pizza is stupid
+Angel: Why did you bring this to us you moron?
+: Harry shoves a slice of pineapple pizza into each of their faces and they stop talking to eat the pizza
+Roadie: Whoa! You need to do that more Harry
+Harry: They love pineapple on pizza, but they'll heckle anyone who brings it up to them. They are impossible
+Harry: I like pineapple on pizza too anyways
+Roadie: Is that why they snuck into the kitchen to get the pineapple?
+Angel: Yes
+Devil: Yea
+Angel: HEY WAI-
+Devil: SHI-
+Harry: I need to tell you what went down Roadie
+Roadie: Alright, spill
+=> END
