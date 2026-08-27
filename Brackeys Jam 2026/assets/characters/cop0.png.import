@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dudkv2hvmnsd7"
-path="res://.godot/imported/cameraDisapointed.png-9c0689bb9aa2b6d643da5ef085125d6e.ctex"
+uid="uid://ccmcaiqmp8pft"
+path="res://.godot/imported/cop0.png-57b295f16aeaebacc8328b255c69b0ee.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/characters/cameraDisapointed.png"
-dest_files=["res://.godot/imported/cameraDisapointed.png-9c0689bb9aa2b6d643da5ef085125d6e.ctex"]
+source_file="res://assets/characters/cop0.png"
+dest_files=["res://.godot/imported/cop0.png-57b295f16aeaebacc8328b255c69b0ee.ctex"]
 
 [params]
 

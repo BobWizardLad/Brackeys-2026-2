@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ci265wro0oqmh"
-path="res://.godot/imported/angeldevil.png-28ef2a2442bbcbe3ccbd90780763ba05.ctex"
+uid="uid://cf6djl03hasfm"
+path="res://.godot/imported/homes0.png-51ec241d8c1def438eee5bdc7cf5dce4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/characters/angeldevil.png"
-dest_files=["res://.godot/imported/angeldevil.png-28ef2a2442bbcbe3ccbd90780763ba05.ctex"]
+source_file="res://assets/characters/homes0.png"
+dest_files=["res://.godot/imported/homes0.png-51ec241d8c1def438eee5bdc7cf5dce4.ctex"]
 
 [params]
 

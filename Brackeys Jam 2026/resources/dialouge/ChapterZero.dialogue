@@ -7,17 +7,23 @@
 
 ~ Inside
 Roadie: Mr. P?
+: A camera lowers down from the ceiling. Mr. Pepperoncini's security system
+Roadie (mumbling): he must be in the office right now...
 
 ~ PepperonciniCamera
 Pepperoncini: Clock in Roadie, it's gonna be a long night
 Roadie: Right... Right away sir
 Pepperoncini: I'm gonna be handling the front of house until Allie comes in, alright?
+$> DialogueMoodManager.speaker_mood = DialogueMoodManager.MOOD.DISSAPOINTED
 Pepperoncini: After I get things squared away back here for the weekend
 Roadie: Hey, uh. Mr P?
+$> DialogueMoodManager.speaker_mood = DialogueMoodManager.MOOD.NEUTRAL
 Pepperoncini: Yes kid?
 Roadie: ...
 Roadie: No- Nothing.. I gotta get into the kitchen
+$> DialogueMoodManager.speaker_mood = DialogueMoodManager.MOOD.EXCITED
 Pepperoncini: That's the spirit, go get em'
+$> DialogueMoodManager.speaker_mood = DialogueMoodManager.MOOD.NEUTRAL
 
 ~ TimePassesWork
 : Time passes as the shift runs its course
@@ -63,4 +69,15 @@ Roadie: Well, i'm gonna wash up a bit, I just got done working in the kitchen
 Cop: Don't forget to flush
 Roadie: ...Thanks?
 Roadie: Bye.
+=> END
+
+~ meme
+Cop: Talk to mee
+Roadie: oooohh baby
+Harry: Talk to me
+Angel: Talk to mee
+Homes: oooohh baby
+Devil: Talk to me
+Robot: SO YOU THINK YOU ARE BETTER OFF ALONE?
+Robot?: boop beep beep beep boop
 => END

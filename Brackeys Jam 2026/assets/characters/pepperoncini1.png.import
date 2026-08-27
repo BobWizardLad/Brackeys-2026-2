@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cfni013xda3yd"
-path="res://.godot/imported/angel.png-48494d5c4d61f906b9370a88d8a98067.ctex"
+uid="uid://dudkv2hvmnsd7"
+path="res://.godot/imported/pepperoncini1.png-b4fb329819d4def92fb4c09c8b0e5ab5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/characters/angel.png"
-dest_files=["res://.godot/imported/angel.png-48494d5c4d61f906b9370a88d8a98067.ctex"]
+source_file="res://assets/characters/pepperoncini1.png"
+dest_files=["res://.godot/imported/pepperoncini1.png-b4fb329819d4def92fb4c09c8b0e5ab5.ctex"]
 
 [params]
 

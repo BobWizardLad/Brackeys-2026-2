@@ -9,7 +9,7 @@
 [node name="Character" parent="." unique_id=1751958569 instance=ExtResource("1_7d6pa")]
 position = Vector2(178, 150)
 dialogue_resource = ExtResource("2_3egnn")
-dialogue_cue = "Beginning"
+dialogue_cue = "FadeToEntrance"
 
 [node name="Icon" type="Sprite2D" parent="Character" unique_id=984835909]
 texture = ExtResource("3_701ev")
