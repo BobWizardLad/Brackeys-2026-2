@@ -18,10 +18,10 @@ config/icon="res://assets/icon.svg"
 [autoload]
 
 DialogueManager="*uid://c3rodes2l3gxb"
-StoryService="*uid://dqhtmjwp4uuhu"
 CURSOR="*uid://r5v6rorx0d7d"
 SCENE_TRANSITION="*uid://2eanck2m0l07"
 DialogueMoodManager="*uid://ctmyfxwl3fnha"
+StoryFlags="*uid://d4iry06l4m7ee"
 
 [dialogue_manager]
 
