@@ -8,6 +8,8 @@
 [ext_resource type="Texture2D" uid="uid://c2v6lk2il7250" path="res://assets/MainRoom2.png" id="6_drmyl"]
 [ext_resource type="Texture2D" uid="uid://bjte5gitbqftg" path="res://assets/MoveArrow.png" id="6_wphoq"]
 [ext_resource type="Texture2D" uid="uid://c57unhxm4htor" path="res://assets/Bathroom.png" id="7_wphoq"]
+[ext_resource type="Texture2D" uid="uid://b3lxdi6bx8a2n" path="res://assets/Sprink.png" id="8_f6ju0"]
+[ext_resource type="Script" uid="uid://75kp4x0qokfq" path="res://scripts/pizza_ingredient_pickup.gd" id="8_vc7tx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h0gde"]
 size = Vector2(164.99995, 262.7965)
@@ -20,6 +22,9 @@ size = Vector2(109.99998, 116.00001)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f6ju0"]
 size = Vector2(80.0229, 110.50758)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vc7tx"]
+size = Vector2(29.011452, 38.000004)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_drmyl"]
 size = Vector2(273.09357, 373.43945)
@@ -99,6 +104,19 @@ new_camera = NodePath("../../Restroom/Camera")
 position = Vector2(1.2704775, -3.8106384)
 scale = Vector2(1.0000005, 1)
 shape = SubResource("RectangleShape2D_f6ju0")
+
+[node name="Area2D5" type="Area2D" parent="MainArea2" unique_id=459329455]
+position = Vector2(415.99994, 63.000015)
+script = ExtResource("8_vc7tx")
+
+[node name="Sprite2D" type="Sprite2D" parent="MainArea2/Area2D5" unique_id=1136013787]
+scale = Vector2(0.165, 0.165)
+texture = ExtResource("8_f6ju0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MainArea2/Area2D5" unique_id=1744390590]
+position = Vector2(0.5058594, -1)
+scale = Vector2(1.0000005, 1)
+shape = SubResource("RectangleShape2D_vc7tx")
 
 [node name="Area2D3" type="Area2D" parent="MainArea2" unique_id=516403052 node_paths=PackedStringArray("new_camera")]
 position = Vector2(850, 438.99997)

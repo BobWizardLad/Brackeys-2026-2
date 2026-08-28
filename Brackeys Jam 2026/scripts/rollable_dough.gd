@@ -8,6 +8,7 @@ extends Draggable_Object
 @onready var sauce: Sprite2D = $SauceOnPizza
 @onready var pep: Sprite2D = $PepOnPizza
 @onready var cheese: Sprite2D = $CheeseOnPizza
+@onready var sprink: Sprite2D = $SprinkOnPizza
 
 var is_growing: bool = false
 var has_flattened: bool = false
@@ -25,6 +26,8 @@ func _on_area_entered(area: Area2D) -> void:
 		pep.visible = true
 	if area.is_in_group("cheese"):
 		cheese.visible = true
+	if area.is_in_group("sprink"):
+		sprink.visible = true
 
 func start_growing() -> void:
 	if is_growing or has_flattened:
