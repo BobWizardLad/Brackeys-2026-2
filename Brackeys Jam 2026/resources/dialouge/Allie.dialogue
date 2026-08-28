@@ -1,9 +1,18 @@
+~ start
+if not StoryFlags.met_allie
+	=> first_dialogue
+elif StoryFlags.solved_robot && not StoryFlags.has_pineapple
+	=> solved_robot
+else
+	=> nothing_to_say
+
 ~ first_dialogue
 Allie: I cannot believe that Mr. P is dead.
 Roadie: Yea, I know, it's a little surreal
 Allie: We are out of work after this then, huh?
 Roadie: Yea... Good luck
 Allie: You too
+$> StoryFlags.met_allie = true
 => END
 
 ~ default_pizza
@@ -17,7 +26,7 @@ Allie: This is such a crazy night
 Roadie: Tell me about it...
 => END
 
-~ clear_robot
+~ solved_robot
 Allie: The robot thing must have happened after I went to the bathroom right before my shift
 Roadie: Does that line up with you too?
 Allie: It does, Mr. P was in his office after I came out and started working
@@ -32,5 +41,6 @@ Allie: I don't want to point any fingers, but Harry used to have your job
 Roadie: Really? Did he bring his 'accessories' into work too
 Allie: Yea, part of why he got fired actually
 Roadie: I do believe that. This is something to go off of, thanks A.
-Roadie: Seeya around R.
+Allie: Seeya around R.
+$> StoryFlags.has_pineapple = true
 => END

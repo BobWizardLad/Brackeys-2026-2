@@ -1,3 +1,11 @@
+~ start
+if not StoryFlags.met_detective
+	=> first_chat
+elif StoryFlags.solved_robot && not StoryFlags.has_pineapple
+	=> clear_robot
+else
+	=> nothing_to_say
+
 ~ first_chat
 : The first stall is occupied, which isn't weird on any other day
 : But it is ominous after a fresh murder
