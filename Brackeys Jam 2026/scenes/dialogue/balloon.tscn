@@ -125,10 +125,15 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = SubResource("Theme_qq3yp")
 
-[node name="Portrait" type="Sprite2D" parent="Balloon" unique_id=134041806]
+[node name="Portrait" type="TextureRect" parent="Balloon" unique_id=317809812]
 unique_name_in_owner = true
-position = Vector2(229, 323)
+layout_mode = 0
+offset_left = 124.0
+offset_top = 511.99997
+offset_right = 244.66116
+offset_bottom = 632.66113
 scale = Vector2(3.025, 3.025)
+expand_mode = 1
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Balloon/Portrait" unique_id=106871195]
 
@@ -174,6 +179,8 @@ editor_description = "Listen for the started typing signal to trigger new voice 
 layout_mode = 2
 size_flags_vertical = 3
 text = "Dialogue..."
+seconds_per_step = 0.03
+seconds_per_pause_step = 0.4
 
 [node name="Control" type="Control" parent="Balloon/MarginContainer/PanelContainer/MarginContainer/HBoxContainer" unique_id=418507161]
 custom_minimum_size = Vector2(20, 10)
@@ -214,5 +221,11 @@ text = "Response example"
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1162558754]
 unique_name_in_owner = true
 
+[node name="TypingSoundPlayer" type="AudioStreamPlayer" parent="." unique_id=1136286577]
+unique_name_in_owner = true
+volume_db = 9.123
+max_polyphony = 7
+
 [connection signal="gui_input" from="Balloon" to="." method="_on_balloon_gui_input"]
+[connection signal="spoke" from="Balloon/MarginContainer/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer/DialogueLabel" to="TypingSoundPlayer" method="play" unbinds=3]
 [connection signal="response_selected" from="Balloon/CenterContainer/ResponsesMenu" to="." method="_on_responses_menu_response_selected"]

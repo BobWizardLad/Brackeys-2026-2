@@ -133,14 +133,14 @@ position = Vector2(3.175293, -27.944336)
 scale = Vector2(1.0000005, 1)
 shape = SubResource("RectangleShape2D_drmyl")
 
-[node name="Node" type="Node2D" parent="." unique_id=1523316892]
+[node name="Characters" type="Node2D" parent="." unique_id=1523316892]
 
-[node name="Character" parent="Node" unique_id=1751958569 instance=ExtResource("9_vc7tx")]
+[node name="Character" parent="Characters" unique_id=1751958569 instance=ExtResource("9_vc7tx")]
 position = Vector2(638, 517)
 dialogue_resource = ExtResource("10_er0sr")
 dialogue_cue = "nothing_to_say"
 
-[node name="Sprite2D" type="Sprite2D" parent="Node/Character" unique_id=1895429014]
+[node name="Sprite2D" type="Sprite2D" parent="Characters/Character" unique_id=1895429014]
 position = Vector2(0, -43)
 scale = Vector2(2.8400002, 2.88)
 texture = ExtResource("10_eljgp")
