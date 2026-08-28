@@ -138,11 +138,15 @@ func apply_dialogue_line() -> void:
 
 	character_label.visible = not dialogue_line.character.is_empty()
 	character_label.text = tr(dialogue_line.character, "dialogue")
-	var portrait_path: String = "res://assets/characters/%s.png" % (dialogue_line.character.to_lower() + str(DialogueMoodManager.speaker_mood))
+	var portrait_path: String = "res://resources/characters/%s.tres" % (dialogue_line.character.to_lower() + str(DialogueMoodManager.speaker_mood))
 	if FileAccess.file_exists(portrait_path):
 		portrait.texture = load(portrait_path)
 	else:
 		portrait.texture = null
+	if DialogueMoodManager.speaker_mood == 0:
+		%PortraitAnimationPlayer.current_animation = "talking"
+	else:
+		%PortraitAnimationPlayer.current_animation = "idle"
 	
 	var typing_sfx_path: String = "res://assets/sfx/type.mp3"
 	if FileAccess.file_exists(typing_sfx_path):

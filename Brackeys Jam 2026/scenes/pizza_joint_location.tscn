@@ -11,6 +11,8 @@
 [ext_resource type="PackedScene" uid="uid://c0xf764tvu8r1" path="res://scenes/character/character.tscn" id="9_vc7tx"]
 [ext_resource type="Texture2D" uid="uid://bsaiwaby2hjes" path="res://assets/characters/allie0.png" id="10_eljgp"]
 [ext_resource type="Resource" uid="uid://buantu5q5urcm" path="res://resources/dialouge/Allie.dialogue" id="10_er0sr"]
+[ext_resource type="Resource" uid="uid://byc4fxaco0utb" path="res://resources/dialouge/Robot.dialogue" id="12_c1vtd"]
+[ext_resource type="Texture2D" uid="uid://cwpb6ruc3b05c" path="res://assets/characters/robot0.png" id="13_rnb0p"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h0gde"]
 size = Vector2(164.99995, 262.7965)
@@ -144,3 +146,13 @@ dialogue_cue = "nothing_to_say"
 position = Vector2(0, -43)
 scale = Vector2(2.8400002, 2.88)
 texture = ExtResource("10_eljgp")
+
+[node name="Character2" parent="Characters" unique_id=511085000 instance=ExtResource("9_vc7tx")]
+position = Vector2(5871, 580)
+dialogue_resource = ExtResource("12_c1vtd")
+dialogue_cue = "first_chat"
+
+[node name="Sprite2D" type="Sprite2D" parent="Characters/Character2" unique_id=1578377172]
+position = Vector2(0, -43)
+scale = Vector2(2.8400002, 2.88)
+texture = ExtResource("13_rnb0p")
