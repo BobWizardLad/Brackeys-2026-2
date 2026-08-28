@@ -149,7 +149,7 @@ shape = SubResource("RectangleShape2D_drmyl")
 [node name="Allie" parent="Characters" unique_id=1751958569 instance=ExtResource("9_vc7tx")]
 position = Vector2(638, 517)
 dialogue_resource = ExtResource("10_er0sr")
-dialogue_cue = "nothing_to_say"
+dialogue_cue = "start"
 
 [node name="Sprite2D" type="Sprite2D" parent="Characters/Allie" unique_id=1895429014]
 position = Vector2(0, -43)

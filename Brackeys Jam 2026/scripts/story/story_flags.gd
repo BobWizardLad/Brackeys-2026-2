@@ -9,6 +9,7 @@ var met_robot: bool
 var met_fake_robot: bool
 var met_allie: bool
 var met_homes: bool
+var met_detective: bool
 
 var has_sprinkles: bool
 var has_anchovies: bool
@@ -17,7 +18,12 @@ var has_vicodin: bool
 var has_bolts: bool
 
 var solved_clown: bool
+var discussed_clown: bool
 var solved_mole: bool
+var discussed_mole: bool
 var solved_harry: bool
+var discussed_harry: bool
 var solved_robot: bool
+var discussed_robot: bool
 var solved_homes: bool
+var discussed_homes: bool
