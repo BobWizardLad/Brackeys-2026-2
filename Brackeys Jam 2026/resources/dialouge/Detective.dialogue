@@ -1,3 +1,11 @@
+~ start
+if not StoryFlags.met_detective
+	=> first_chat
+elif StoryFlags.solved_robot && not StoryFlags.has_pineapple
+	=> clear_robot
+else
+	=> nothing_to_say
+
 ~ first_chat
 : The first stall is occupied, which isn't weird on any other day
 : But it is ominous after a fresh murder
@@ -13,35 +21,72 @@
 Roadie: Hey, you know a murder just occoured, right? What are you doing in here?
 ???: I know that, its why i'm here. I'm the detective on the-
 : . . .
+$> DialogueMoodManager.speaker_mood = DialogueMoodManager.MOOD.DISSAPOINTED
 Detective: Ouughh- On the case..
 Detective: But i'm afraid I made a mistake at lunch today
 Detective: I don't think i'll be out anytime tonight
 
+$> DialogueMoodManager.speaker_mood = DialogueMoodManager.MOOD.NEUTRAL
 Roadie: I'm the pizza guy that was working here tonight before the murder. Roadie.
 Detective: Nice to hear you Roadie. Though you may be working overtime tonight, no one gets out of here until we solve this case.
 Roadie: So i've heard
 Detective: I'm confined to the can for the forseeable future so that will take some time. Some way to spend my last day on the force...
 Detective: Hey, kid
+$> DialogueMoodManager.speaker_mood = DialogueMoodManager.MOOD.EXCITED
 Detective: I have an offer for you
 Roadie: What do you mean offer dude?
+$> DialogueMoodManager.speaker_mood = DialogueMoodManager.MOOD.NEUTRAL
 Detective: I'm stuck in here and wont be solving the mystery anytime soon. You flip pizzas right?
 Roadie: Pizzas, not burgers
 Roadie: But yea
 Detective: Whatever, whatever. Listen! I trust a pizza flipper only because pizza will turn any man honest when the pizza's made right
+$> DialogueMoodManager.speaker_mood = DialogueMoodManager.MOOD.DISSAPOINTED
 Detective: Everyone else: Scumbags. Liars. Can't trust em.
 Detective: Not even your own customers. Unless...
+$> DialogueMoodManager.speaker_mood = DialogueMoodManager.MOOD.EXCITED
 Detective: You can make some pizzas and get the truth!
 
+$> DialogueMoodManager.speaker_mood = DialogueMoodManager.MOOD.NEUTRAL
 Roadie: Listen, i'm not a detective. I just want to get off my shift on time
 Detective: That's the offer kid. Solve this and you get to go home
 
 Detective: I need you to resore rightful rigatoni to New Sokyo
-Roadie: There is no rigatoni in this town dude 
+Roadie: There is no rigatoni in this town dude
 Detective: Even so, you need to take this case
+$> DialogueMoodManager.speaker_mood = DialogueMoodManager.MOOD.DISSAPOINTED
 Detective: Your evening depends on it
+$> DialogueMoodManager.speaker_mood = DialogueMoodManager.MOOD.NEUTRAL
+Detective: Come talk to me again when you are ready to start
+=> END
+
+~ tutorial
+Detective: Ok kid, make me a pizza
+Roadie: A pizza?
+Detective: yea, make me any pizza you fancy, i'm not picky
+Roadie: Is that what detectives do?
+Detective: It's what you'll do tonight! Pizza makes people honest. Remeber that!
+Dete
+
+~ tutorial_pizza
+Detective: Perfect kid! I'm not picky but other customers will be. I'll give you all i've got since you brought me my favorite pizza
+Detective: I made a bit of an expedition
+Roadie: Out of the john?
+Detective: Just a stolen moment. But I found this!
+: A bucket of bolts slides out from under the stall
+Roadie: ... Bolts?
+Detective: I have a hunch kid, just roll with me
+Detective: Everyone has a favorite topping
+Roadie: Like toilet bolts?
+$> DialogueMoodManager.speaker_mood = DialogueMoodManager.MOOD.DISSAPOINTED
+Detective: Who would eat a piece of metal kid? I don't know, give it a shot
+Roadie: You're the expert...
+$> DialogueMoodManager.speaker_mood = DialogueMoodManager.MOOD.NEUTRAL
 => END
 
 ~ default_pizza
+Detective: Yea, pizza. You could use something like that to get someone to talk. Tell the REAL truth y'know?
+Roadie: How about you, feeling honest?
+Detective: I've been honest the whole time. Nothing new to say. Make another one for someone else
 => END
 
 ~ nothing_to_say
@@ -51,12 +96,31 @@ Detective: Well, get out there! You can do it kid
 => END
 
 ~ clear_robot
+: Roadie fills in The Detective on what he knows and the Robot's story.
+Detective: Good start kid! We have a timeline for when Pepperoncini entered his office.
+Roadie: But he didn't do it...
+Detective: Doesn't seem like it, no! But! We still have evidence to dig into
+Detective: He was a bloody mess right? Go check for a weapon or a sign of what the weapon may have been
+Detective: You never know what a second look can dig up.
 => END
 
 ~ clear_harry
+: Roadie fills in The Detective on what he knows and the ordeal surrounding Harry
+Detective: Great Mary Joseph! You have a red handed culprit already? You are good at this kid
+Roadie: Yea, he admitted to it under very little pressure actually
+Detective: Well, if Harry was only an accessory like that he probably wanted to confess from the start
+Roadie: Well, we did it right? Caught the bad guy!
+Detective: Not quite.
+Roadie: Why not?
+Detective: You mentioned a bruise, a messy office, and other unexplained evidence right?
+Roadie: Yea...
+Detective: It's just bad form as a detective to leave clues unexplained
+Detective: There may be more to this murder yet...
+Detective: Try to uncover this whole bruise deal, get an explanation for that from the perp
 => END
 
 ~ clear_clown
+
 => END
 
 ~ clear_holmes

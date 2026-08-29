@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cfwa448saecxq"]
 
-[ext_resource type="Script" uid="uid://d4iry06l4m7ee" path="res://scripts/story/story.gd" id="1_3htlc"]
+[ext_resource type="Script" uid="uid://d4iry06l4m7ee" path="res://scripts/story/story_flags.gd" id="1_3htlc"]
 
 [node name="StoryService" type="Node" unique_id=877266453]
 script = ExtResource("1_3htlc")

@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=18
+type="Resource"
+uid="uid://buantu5q5urcm"
+path="res://.godot/imported/Allie.dialogue-b47d749752aec2b7022355bcfbc9bc3d.tres"
+
+[deps]
+
+source_file="res://resources/dialouge/Allie.dialogue"
+dest_files=["res://.godot/imported/Allie.dialogue-b47d749752aec2b7022355bcfbc9bc3d.tres"]
+
+[params]
+
+defaults=true

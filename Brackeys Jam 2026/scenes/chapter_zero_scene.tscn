@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://csbe2bhoduekt"]
+
+[ext_resource type="Script" uid="uid://ddt6cbire0l6i" path="res://scripts/dialogue/chapter_zero_scene.gd" id="1_4hjhq"]
+[ext_resource type="PackedScene" uid="uid://c0xf764tvu8r1" path="res://scenes/character/character.tscn" id="2_7cd0w"]
+[ext_resource type="Resource" uid="uid://dww2186wkabi0" path="res://resources/dialouge/ChapterZero.dialogue" id="3_7cd0w"]
+[ext_resource type="Texture2D" uid="uid://c57unhxm4htor" path="res://assets/Bathroom.png" id="4_10c5f"]
+
+[node name="ChapterZeroScene" type="Node2D" unique_id=1345900131]
+script = ExtResource("1_4hjhq")
+
+[node name="DialogueActionable" parent="." unique_id=1751958569 instance=ExtResource("2_7cd0w")]
+dialogue_resource = ExtResource("3_7cd0w")
+dialogue_cue = "beginning"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=410593618]
+texture = ExtResource("4_10c5f")
+centered = false

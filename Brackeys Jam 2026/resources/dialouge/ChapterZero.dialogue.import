@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=18
+type="Resource"
+uid="uid://dww2186wkabi0"
+path="res://.godot/imported/ChapterZero.dialogue-cb5f24648054e269daf7316ab907b229.tres"
+
+[deps]
+
+source_file="res://resources/dialouge/ChapterZero.dialogue"
+dest_files=["res://.godot/imported/ChapterZero.dialogue-cb5f24648054e269daf7316ab907b229.tres"]
+
+[params]
+
+defaults=true
