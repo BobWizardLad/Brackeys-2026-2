@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=18
+type="Resource"
+uid="uid://clwynfjg5cx8b"
+path="res://.godot/imported/Cop.dialogue-99df163ea820f5404d8695dd8370cb7e.tres"
+
+[deps]
+
+source_file="res://resources/dialouge/Cop.dialogue"
+dest_files=["res://.godot/imported/Cop.dialogue-99df163ea820f5404d8695dd8370cb7e.tres"]
+
+[params]
+
+defaults=true

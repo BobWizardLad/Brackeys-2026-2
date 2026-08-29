@@ -1,3 +1,9 @@
+~ start
+if not StoryFlags.met_harry
+	=> first_dialogue
+else
+	=> nothing_to_say
+
 ~ first_dialogue
 ???: Hey idiot.
 Roadie: ... Me?
@@ -25,6 +31,7 @@ Harry: I'll be around
 Angel: Ta-ta~
 Devil: Come back real soon~
 Roadie: ugh...
+$> StoryFlags.met_harry = true
 => END
 
 ~ nothing_to_say

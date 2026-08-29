@@ -1,0 +1,21 @@
+~ start
+if not StoryFlags.met_cop and StoryFlage.met_detective
+	=> first_dialogue
+else
+	=> nothing_to_say
+
+~ first_dialogue
+Cop: Where is the detective?
+Roadie: He's occupied with the porcelain palace, said he won't make it out tonight.
+Cop: I told him that food cart across from the station was dirty
+Roadie: He trusted me to proxy for him around here, get the case solved and get everyone home
+Cop: Ok, just keep me updated. And remember: No one leaves until this is sorted!
+$> StoryFlags.met_cop = true
+=> END
+
+~ nothing_to_say
+Cop: Hey, what's nine plus ten?
+Roadie: Don't do this to me
+Cop: 25!
+Roadie: ...
+=> END

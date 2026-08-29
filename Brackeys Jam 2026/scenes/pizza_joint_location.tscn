@@ -22,6 +22,9 @@
 [ext_resource type="PackedScene" uid="uid://drvhkknkluie3" path="res://scenes/character/harry.tscn" id="21_r11lm"]
 [ext_resource type="PackedScene" uid="uid://dbnv6iwbmhxgl" path="res://scenes/character/jiles.tscn" id="22_84nwe"]
 [ext_resource type="PackedScene" uid="uid://irkf6r54x18b" path="res://scenes/character/clown.tscn" id="22_c44aj"]
+[ext_resource type="Resource" uid="uid://dwn3oslayvdvw" path="res://resources/dialouge/Homes.dialogue" id="22_o7ihe"]
+[ext_resource type="Resource" uid="uid://2mircw0pf012" path="res://resources/dialouge/Jiles.dialogue" id="24_o7ihe"]
+[ext_resource type="PackedScene" uid="uid://ri22xm1drjk5" path="res://scenes/character/cop.tscn" id="25_nlabh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h0gde"]
 size = Vector2(164.99995, 262.7965)
@@ -149,7 +152,7 @@ shape = SubResource("RectangleShape2D_drmyl")
 [node name="Detective" parent="Characters" unique_id=132690246 instance=ExtResource("9_vc7tx")]
 position = Vector2(321, 1908)
 dialogue_resource = ExtResource("12_c44aj")
-dialogue_cue = "first_chat"
+dialogue_cue = "start"
 
 [node name="Sprite2D" type="Sprite2D" parent="Characters/Detective" unique_id=1411394869]
 position = Vector2(11, 16.00003)
@@ -162,25 +165,32 @@ position = Vector2(3483, 619)
 [node name="Harry" parent="Characters" unique_id=236545173 instance=ExtResource("21_r11lm")]
 position = Vector2(2994, 617)
 dialogue_resource = ExtResource("14_26rw3")
-dialogue_cue = "nothing_to_say"
+dialogue_cue = "start"
 
 [node name="RobotFake" parent="Characters" unique_id=1799305990 instance=ExtResource("21_c44aj")]
 position = Vector2(5925, 638)
 dialogue_resource = ExtResource("17_8jnav")
-dialogue_cue = "first_chat"
+dialogue_cue = "start"
 
 [node name="Robot" parent="Characters" unique_id=154443225 instance=ExtResource("20_8jnav")]
 position = Vector2(4979, 671)
 dialogue_resource = ExtResource("12_c1vtd")
-dialogue_cue = "first_chat"
+dialogue_cue = "start"
 
 [node name="Allie" parent="Characters" unique_id=1751958569 instance=ExtResource("19_8jnav")]
 position = Vector2(727, 454)
 dialogue_resource = ExtResource("10_er0sr")
-dialogue_cue = "nothing_to_say"
+dialogue_cue = "start"
 
 [node name="Homes" parent="Characters" unique_id=1248303837 instance=ExtResource("21_84nwe")]
 position = Vector2(2266, 634)
+dialogue_resource = ExtResource("22_o7ihe")
+dialogue_cue = "start"
 
 [node name="Jiles" parent="Characters" unique_id=2109724038 instance=ExtResource("22_84nwe")]
 position = Vector2(383, 663)
+dialogue_resource = ExtResource("24_o7ihe")
+dialogue_cue = "start"
+
+[node name="Cop" parent="Characters" unique_id=3237420 instance=ExtResource("25_nlabh")]
+position = Vector2(1687, 838)

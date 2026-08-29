@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=18
+type="Resource"
+uid="uid://dwn3oslayvdvw"
+path="res://.godot/imported/Homes.dialogue-6231ed264f5aefb6725535494213987c.tres"
+
+[deps]
+
+source_file="res://resources/dialouge/Homes.dialogue"
+dest_files=["res://.godot/imported/Homes.dialogue-6231ed264f5aefb6725535494213987c.tres"]
+
+[params]
+
+defaults=true

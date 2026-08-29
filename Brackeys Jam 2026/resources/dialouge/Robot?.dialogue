@@ -1,4 +1,10 @@
-~ first_chat
+~ start
+if not StoryFlags.met_fake_robot
+	=> first_dialogue
+else
+	=> nothing_to_say
+
+~ first_dialogue
 ???: Hey kid
 Roadie: Who are you?
 ???: That depends, you own this joint?
@@ -15,6 +21,7 @@ Robot?: I wanted my job back and thought that maybe if I looked the part they'd 
 Robot?: Y'now, like the robot tv star thing is just what the people want to see
 Robot?: And if I can play a robot convincingly enough they'd put me back on air
 Roadie: Good luck with that
+$> StoryFlags.met_fake_robot = true
 => END
 
 ~ nothing_to_say
