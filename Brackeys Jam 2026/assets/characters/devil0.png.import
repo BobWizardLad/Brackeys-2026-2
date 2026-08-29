@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bsprnaifbryf2"
-path="res://.godot/imported/cameraExcited.png-224a63ae24082e15e09a41fdae9bfa79.ctex"
+uid="uid://dkj06wfltjhnk"
+path="res://.godot/imported/devil0.png-826333c35aa3b1dfbf48bd79114903e5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/characters/cameraExcited.png"
-dest_files=["res://.godot/imported/cameraExcited.png-224a63ae24082e15e09a41fdae9bfa79.ctex"]
+source_file="res://assets/characters/devil0.png"
+dest_files=["res://.godot/imported/devil0.png-826333c35aa3b1dfbf48bd79114903e5.ctex"]
 
 [params]
 

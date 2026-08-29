@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bl6h4bpbgci2s"
-path="res://.godot/imported/bathroomStall3.png-aa78293d9755886fe480e48fd007bf9b.ctex"
+uid="uid://cxmyf2vfwj5de"
+path="res://.godot/imported/tired0.png-efc261312f698a7dff1549bef95df995.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/characters/bathroomStall3.png"
-dest_files=["res://.godot/imported/bathroomStall3.png-aa78293d9755886fe480e48fd007bf9b.ctex"]
+source_file="res://assets/characters/tired0.png"
+dest_files=["res://.godot/imported/tired0.png-efc261312f698a7dff1549bef95df995.ctex"]
 
 [params]
 

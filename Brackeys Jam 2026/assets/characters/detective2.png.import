@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ccmcaiqmp8pft"
-path="res://.godot/imported/sus.png-1cb07b01e164602c94c6c2cf65cef1ad.ctex"
+uid="uid://cisyekfvc0xe6"
+path="res://.godot/imported/detective2.png-48cc5fba8d9cd527d5c48dc94b5e2e12.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/characters/sus.png"
-dest_files=["res://.godot/imported/sus.png-1cb07b01e164602c94c6c2cf65cef1ad.ctex"]
+source_file="res://assets/characters/detective2.png"
+dest_files=["res://.godot/imported/detective2.png-48cc5fba8d9cd527d5c48dc94b5e2e12.ctex"]
 
 [params]
 

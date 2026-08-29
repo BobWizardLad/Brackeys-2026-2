@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dkj06wfltjhnk"
-path="res://.godot/imported/devil.png-3903482695b8b2b867246328c9556608.ctex"
+uid="uid://ci265wro0oqmh"
+path="res://.godot/imported/harry0.png-38ef7e56e7da8a0c1408cb2088028fa4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/characters/devil.png"
-dest_files=["res://.godot/imported/devil.png-3903482695b8b2b867246328c9556608.ctex"]
+source_file="res://assets/characters/harry0.png"
+dest_files=["res://.godot/imported/harry0.png-38ef7e56e7da8a0c1408cb2088028fa4.ctex"]
 
 [params]
 

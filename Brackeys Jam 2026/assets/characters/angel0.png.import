@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bdgoqdqbt1bxc"
-path="res://.godot/imported/kid.png-afd8456e469bde3f17d10259b3eac200.ctex"
+uid="uid://dd5kto71nsdml"
+path="res://.godot/imported/angel0.png-6cf7a5590d0c3e0003d918e73bd2faf7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/characters/kid.png"
-dest_files=["res://.godot/imported/kid.png-afd8456e469bde3f17d10259b3eac200.ctex"]
+source_file="res://assets/characters/angel0.png"
+dest_files=["res://.godot/imported/angel0.png-6cf7a5590d0c3e0003d918e73bd2faf7.ctex"]
 
 [params]
 

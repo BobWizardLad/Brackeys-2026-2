@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cfni013xda3yd"
-path="res://.godot/imported/angel.png-48494d5c4d61f906b9370a88d8a98067.ctex"
+uid="uid://bl6h4bpbgci2s"
+path="res://.godot/imported/detective1.png-3476f19536f21d7c25331a515f65f199.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/characters/angel.png"
-dest_files=["res://.godot/imported/angel.png-48494d5c4d61f906b9370a88d8a98067.ctex"]
+source_file="res://assets/characters/detective1.png"
+dest_files=["res://.godot/imported/detective1.png-3476f19536f21d7c25331a515f65f199.ctex"]
 
 [params]
 

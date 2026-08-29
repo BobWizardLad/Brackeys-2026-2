@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c3iv25dphsnmu"
-path="res://.godot/imported/robotFake.png-4bb9c1f4832190a12464869e85ec627d.ctex"
+uid="uid://dudkv2hvmnsd7"
+path="res://.godot/imported/pepperoncini1.png-b4fb329819d4def92fb4c09c8b0e5ab5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/characters/robotFake.png"
-dest_files=["res://.godot/imported/robotFake.png-4bb9c1f4832190a12464869e85ec627d.ctex"]
+source_file="res://assets/characters/pepperoncini1.png"
+dest_files=["res://.godot/imported/pepperoncini1.png-b4fb329819d4def92fb4c09c8b0e5ab5.ctex"]
 
 [params]
 

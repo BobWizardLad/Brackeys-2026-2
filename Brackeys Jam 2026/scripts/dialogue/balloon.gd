@@ -70,6 +70,11 @@ var mutation_cooldown: Timer = Timer.new()
 ## Indicator to show that player can progress dialogue.
 @onready var progress: Polygon2D = %Progress
 
+## The speaking character portrait
+@onready var portrait: TextureRect = %Portrait
+
+## The audio player that plays when a character is typed out
+@onready var typing_sound_player: AudioStreamPlayer = %TypingSoundPlayer
 
 func _ready() -> void:
 	balloon.hide()
@@ -133,6 +138,23 @@ func apply_dialogue_line() -> void:
 
 	character_label.visible = not dialogue_line.character.is_empty()
 	character_label.text = tr(dialogue_line.character, "dialogue")
+	# Applies a portrait for the given line of dialogue
+	var portrait_path: String = "res://resources/characters/%s.tres" % (dialogue_line.character.to_lower() + str(DialogueMoodManager.speaker_mood))
+	if FileAccess.file_exists(portrait_path):
+		portrait.texture = load(portrait_path)
+	else:
+		portrait.texture = null
+	# Applies an animation based on the mood of the speaker
+	if DialogueMoodManager.speaker_mood == 0 && FileAccess.file_exists(portrait_path):
+		%PortraitAnimationPlayer.current_animation = "talking"
+	else:
+		%PortraitAnimationPlayer.current_animation = "idle"
+	var typing_sfx_path: String = "res://assets/sfx/type.mp3"
+	# Applies the speaking sfx for a line of dialogue
+	if FileAccess.file_exists(typing_sfx_path):
+		typing_sound_player.stream = load(typing_sfx_path)
+	else:
+		typing_sound_player.stream = null
 
 	dialogue_label.hide()
 	dialogue_label.dialogue_line = dialogue_line
@@ -213,6 +235,5 @@ func _on_balloon_gui_input(event: InputEvent) -> void:
 
 func _on_responses_menu_response_selected(response: DialogueResponse) -> void:
 	next(response.next_id)
-
 
 #endregion

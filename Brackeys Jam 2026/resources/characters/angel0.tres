@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" format=3 uid="uid://b8mb2utqn0hsh"]
+
+[ext_resource type="Texture2D" uid="uid://brxlicc14q3j5" path="res://assets/characters/angelTalk.png" id="1_khk20"]
+
+[resource]
+atlas = ExtResource("1_khk20")
+region = Rect2(0, 0, 80, 80)
