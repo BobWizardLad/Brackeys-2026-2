@@ -3,13 +3,14 @@ extends Node
 ## Handles the story beats that have been discovered.
 
 var met_clown: bool
-var met_mole: bool
+var met_jiles: bool
 var met_harry: bool
 var met_robot: bool
 var met_fake_robot: bool
 var met_allie: bool
 var met_homes: bool
 var met_detective: bool
+var met_cop: bool
 
 var has_sprinkles: bool
 var has_anchovies: bool

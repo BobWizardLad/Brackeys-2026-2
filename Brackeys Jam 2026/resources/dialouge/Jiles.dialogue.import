@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=18
+type="Resource"
+uid="uid://2mircw0pf012"
+path="res://.godot/imported/Jiles.dialogue-de9cf4cd12b355e6def152d20affa382.tres"
+
+[deps]
+
+source_file="res://resources/dialouge/Jiles.dialogue"
+dest_files=["res://.godot/imported/Jiles.dialogue-de9cf4cd12b355e6def152d20affa382.tres"]
+
+[params]
+
+defaults=true

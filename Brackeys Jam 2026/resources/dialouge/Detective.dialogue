@@ -1,8 +1,6 @@
 ~ start
 if not StoryFlags.met_detective
 	=> first_chat
-elif StoryFlags.solved_robot && not StoryFlags.has_pineapple
-	=> clear_robot
 else
 	=> nothing_to_say
 
@@ -56,7 +54,7 @@ Detective: Even so, you need to take this case
 $> DialogueMoodManager.speaker_mood = DialogueMoodManager.MOOD.DISSAPOINTED
 Detective: Your evening depends on it
 $> DialogueMoodManager.speaker_mood = DialogueMoodManager.MOOD.NEUTRAL
-Detective: Come talk to me again when you are ready to start
+$> StoryFlags.met_detective = true
 => END
 
 ~ tutorial
@@ -65,7 +63,7 @@ Roadie: A pizza?
 Detective: yea, make me any pizza you fancy, i'm not picky
 Roadie: Is that what detectives do?
 Detective: It's what you'll do tonight! Pizza makes people honest. Remeber that!
-Dete
+=> END
 
 ~ tutorial_pizza
 Detective: Perfect kid! I'm not picky but other customers will be. I'll give you all i've got since you brought me my favorite pizza

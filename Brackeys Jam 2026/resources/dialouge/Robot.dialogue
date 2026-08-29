@@ -1,4 +1,10 @@
-~ first_chat
+~ start
+if not StoryFlags.met_robot
+	=> first_dialogue
+else
+	=> nothing_to_say
+
+~ first_dialogue
 ???: LOCATION: FLAVORTOWN
 Roadie: Huh?
 ???: QUESTION: HUH? POORLY CONTRUCTED. TRY THE SHRIMP
@@ -16,6 +22,7 @@ Roadie: I am the detective. I am here to question you. Did you do it?
 ROBOT: QUESTION: HAVE I COMMITED A MURDER? ERROR: MOTIVATIONS ARE NOT IN MY DESIGN.
 ROBOT: THIS IS IMPOSSIBLE. I COULD NOT HAVE MURDERED THE VICTIM
 Roadie: ... I'll be keeping an eye on you
+$> StoryFlags.met_robot = true
 => END
 
 ~ nothing_to_say
@@ -25,6 +32,7 @@ ROBOT: INQUIRY: DO YOU HAVE PIZZA?
 Roadie: No.
 ROBOT: ERROR: CARING IS NOT A-
 Roadie: Prime directive, yea yea bolthead. I'll be back
+=> END
 
 ~ default_pizza
 ROBOT: TAGLINE: THAT IS BOMB.com TASTY PIZZA DUUUUDEE
@@ -48,7 +56,7 @@ ROBOT: HE MOVED TO HIS OFFICE SOON AFTER. AUDITORY RECEPTORS DETECTED SOMETHING 
 Roadie: That clears the aspirin, he must have been coming down from your assault
 ROBOT: IMPLICATION NOTED. ASSAULT. ANTI-PIRACY FLASH IS PROTECTED AGAINST CHARGES SUCH AS THAT
 ROBOT: I ATE PIZZA AFTER THIS. RECALL PRIOR TAGLINE: WINNER WINNER PIZZA DINNER
-Robot?: I can clear that he didn't go anywhere after that. Been watching him like a hawk
+Fake Robot: I can clear that he didn't go anywhere after that. Been watching him like a hawk
 ROBOT: STATEMENT CONFIRMED: THE IMPERSONATOR MEATBAG DID NOT GO ANYWHERE EITHER. HE HAS ONLY WATCHED ME
 ROBOT: WITH ENVY AND SEETHING CONTEMPT FOR MY SUPERIOR PROGRAMMING
 Roadie: Well, it sounds like you are both holding a decent alibi. Thanks for your cooperation

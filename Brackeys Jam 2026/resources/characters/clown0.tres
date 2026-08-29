@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" format=3 uid="uid://dwcu1f3jxfhjn"]
+
+[ext_resource type="Texture2D" uid="uid://b23f60f2mdeew" path="res://assets/characters/clownTalk.png" id="1_42f5p"]
+
+[resource]
+atlas = ExtResource("1_42f5p")
+region = Rect2(0, 0, 80, 80)

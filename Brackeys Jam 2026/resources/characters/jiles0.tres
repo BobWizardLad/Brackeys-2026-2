@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" format=3 uid="uid://dnk40bujci375"]
+
+[ext_resource type="Texture2D" uid="uid://dtrp8q65pge24" path="res://assets/characters/moleTalk.png" id="1_qbuyn"]
+
+[resource]
+atlas = ExtResource("1_qbuyn")
+region = Rect2(0, 0, 80, 80)

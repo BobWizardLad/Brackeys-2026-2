@@ -1,0 +1,26 @@
+~ start
+if not StoryFlags.met_homes
+	=> first_dialogue
+else
+	=> nothing_to_say
+
+~ first_dialogue
+???: How are the pizzas turning kid?
+Roadie: Turning just fine, need to turn up some clues first because i'll be solving this murder
+Homes: I'm Homes. Good luck getting any leads out of the people in here
+Homes: Everybody lies.
+Homes: That's why I only follow the numbers
+Homes: I cut the other kinda pies
+Roadie: ...Fruit Pies?
+Homes: No, pie charts. I'm a data visualization guy
+Roadie: Seen any visuals of a crime around here?
+Homes: Y'now what? I did! I saw a young 20 something or another walk around a pizza parlor asking dumb questions!
+Roadie: ... Seeya around
+$> StoryFlags.met_homes = true
+=> END
+
+~ nothing_to_say
+Homes: Got any new leads kid?
+Roadie: Nothing to ask you yet.
+Homes: Well come back when you do. I'm almost always eventually right
+=> END
