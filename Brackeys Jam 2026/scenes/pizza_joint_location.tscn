@@ -15,7 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://p0j7s6xxaisg" path="res://assets/characters/detective0.png" id="12_r11lm"]
 [ext_resource type="Resource" uid="uid://bj8b83xputpvk" path="res://resources/dialouge/Clown.dialogue" id="13_u6ge7"]
 [ext_resource type="Resource" uid="uid://b15ytfhosx35g" path="res://resources/dialouge/Harry.dialogue" id="14_26rw3"]
-[ext_resource type="Resource" uid="uid://sonxtq1uvff2" path="res://resources/dialouge/Robot?.dialogue" id="17_8jnav"]
+[ext_resource type="Resource" uid="uid://biqpraeutfjpw" path="res://resources/dialouge/RobotFake.dialogue" id="17_8jnav"]
 [ext_resource type="PackedScene" uid="uid://d2r8i2cb3i023" path="res://scenes/character/allie.tscn" id="19_8jnav"]
 [ext_resource type="PackedScene" uid="uid://cf05j65o5o68d" path="res://scenes/character/robot.tscn" id="20_8jnav"]
 [ext_resource type="PackedScene" uid="uid://ceduepid7xmmi" path="res://scenes/character/homes.tscn" id="21_84nwe"]
