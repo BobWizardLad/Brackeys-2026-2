@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=18
+type="Resource"
+uid="uid://sonxtq1uvff2"
+path="res://.godot/imported/RobotFake.dialogue-f59d04f062f6e27619eac0c48b752d8b.tres"
+
+[deps]
+
+source_file="res://resources/dialouge/RobotFake.dialogue"
+dest_files=["res://.godot/imported/RobotFake.dialogue-f59d04f062f6e27619eac0c48b752d8b.tres"]
+
+[params]
+
+defaults=true
