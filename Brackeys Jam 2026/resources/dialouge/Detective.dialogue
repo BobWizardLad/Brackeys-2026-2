@@ -54,7 +54,6 @@ Detective: Even so, you need to take this case
 $> DialogueMoodManager.speaker_mood = DialogueMoodManager.MOOD.DISSAPOINTED
 Detective: Your evening depends on it
 $> DialogueMoodManager.speaker_mood = DialogueMoodManager.MOOD.NEUTRAL
-Detective: Come talk to me again when you are ready to start
 $> StoryFlags.met_detective = true
 => END
 

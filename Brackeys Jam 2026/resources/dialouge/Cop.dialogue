@@ -1,5 +1,5 @@
 ~ start
-if not StoryFlags.met_cop and StoryFlage.met_detective
+if not StoryFlags.met_cop and StoryFlags.met_detective
 	=> first_dialogue
 else
 	=> nothing_to_say
