@@ -205,5 +205,4 @@ dialogue_cue = "start"
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=2019404600]
 stream = ExtResource("26_c1ae3")
 autoplay = true
-bus = &"Music"
 parameters/looping = true
