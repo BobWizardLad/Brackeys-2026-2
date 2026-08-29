@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bgctbnfv742k6"]
 
 [ext_resource type="Script" uid="uid://b5vv1huurkck1" path="res://scripts/level_controller.gd" id="1_ck1eq"]
-[ext_resource type="Texture2D" uid="uid://blim7ijkowy46" path="res://assets/Lobby 3D Perspective.png" id="2_fubtq"]
+[ext_resource type="Texture2D" uid="uid://mhlo2hl08ie6" path="res://assets/entrance_desk.png" id="2_u6ge7"]
 [ext_resource type="Script" uid="uid://d3chu6xx7ujdg" path="res://scripts/doorway_interact.gd" id="3_xic0v"]
 [ext_resource type="Script" uid="uid://dquvef2yvkf2d" path="res://scripts/enter_new_scene_interact.gd" id="4_fubtq"]
 [ext_resource type="Texture2D" uid="uid://cesamo5n465jt" path="res://assets/MainRoom1.png" id="5_xic0v"]
@@ -49,7 +49,7 @@ script = ExtResource("1_ck1eq")
 
 [node name="Lobby" type="Sprite2D" parent="." unique_id=1646540666]
 position = Vector2(960, 540)
-texture = ExtResource("2_fubtq")
+texture = ExtResource("2_u6ge7")
 
 [node name="Camera" type="Camera2D" parent="Lobby" unique_id=810336173]
 
@@ -183,7 +183,7 @@ dialogue_resource = ExtResource("12_c1vtd")
 dialogue_cue = "start"
 
 [node name="Allie" parent="Characters" unique_id=1751958569 instance=ExtResource("19_8jnav")]
-position = Vector2(727, 454)
+position = Vector2(746, 443)
 dialogue_resource = ExtResource("10_er0sr")
 dialogue_cue = "start"
 
@@ -198,7 +198,7 @@ dialogue_resource = ExtResource("24_o7ihe")
 dialogue_cue = "start"
 
 [node name="Cop" parent="Characters" unique_id=3237420 instance=ExtResource("25_nlabh")]
-position = Vector2(1687, 838)
+position = Vector2(1701, 638)
 dialogue_resource = ExtResource("26_t4x4a")
 dialogue_cue = "start"
 
