@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Brackeys Jam 2026"
-run/main_scene="uid://csbe2bhoduekt"
+run/main_scene="uid://bgctbnfv742k6"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://assets/icon.svg"
 
