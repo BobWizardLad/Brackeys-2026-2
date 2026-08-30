@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://cuax5rquucj74"]
+
+[ext_resource type="Script" uid="uid://db3i87h0avm1h" path="res://scripts/dialogue/cutscene_sequencer.gd" id="1_4f47i"]
+
+[node name="CutsceneSequencer" type="CanvasLayer" unique_id=977761993]
+script = ExtResource("1_4f47i")
+
+[node name="Sprite" type="Sprite2D" parent="." unique_id=226263076]
+unique_name_in_owner = true
+centered = false
