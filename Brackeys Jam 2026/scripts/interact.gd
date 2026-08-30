@@ -9,6 +9,10 @@ func _area_entered(area: Area2D) -> void:
     if area is CursorScript:
         area.left_click_down.connect(left_click_down)
         area.left_click_up.connect(left_click_up)
+    if area is PizzaObject:
+        area.position = Vector2(-100, -100)
+        area.stop_dragging()
+        pizza_interact()
 
 func _area_exited(area: Area2D) -> void:
     if area is CursorScript:
@@ -21,4 +25,5 @@ func left_click_down() -> void:
 func left_click_up() -> void:
     return
 
-
+func pizza_interact() -> void:
+    return

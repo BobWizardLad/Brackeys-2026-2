@@ -26,3 +26,4 @@ position = Vector2(0, -1)
 shape = SubResource("RectangleShape2D_r2iom")
 
 [connection signal="clicked" from="DialogueInteract" to="." method="action"]
+[connection signal="pizza_given" from="DialogueInteract" to="." method="_on_dialogue_interact_pizza_given"]

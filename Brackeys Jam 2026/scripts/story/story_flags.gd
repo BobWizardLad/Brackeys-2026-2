@@ -2,6 +2,11 @@ extends Node
 ## Persistent service that manages flags in the story that modify the game's state
 ## Handles the story beats that have been discovered.
 
+var current_pizza: PizzaObject = null
+
+
+var entered_kitchen_first_time: bool
+
 var met_clown: bool
 var met_jiles: bool
 var met_harry: bool
@@ -28,3 +33,8 @@ var solved_robot: bool
 var discussed_robot: bool
 var solved_homes: bool
 var discussed_homes: bool
+
+var detective_ready_for_pizza: bool
+var detective_given_pizza: bool
+
+signal moved_camera

@@ -30,6 +30,12 @@ signal dialogue_ended()
 ## The target cue to start dialogue from.
 @export var dialogue_cue: String = ""
 
+enum IngredientChoice { SPRINKLES, ANCHOVIES, PINEAPPLES }
+
+@export var ingredient: IngredientChoice
+
+@export var is_tutorial: bool = false
+
 ## The dialogue balloon that was last used by calling [code]action()[/code] (if there was one).
 var dialogue_balloon: Node
 
@@ -39,6 +45,8 @@ static var start_dialogue: Callable = func(with_dialogue_resource: DialogueResou
 
 
 func _ready() -> void:
+	$DialogueInteract.pizza_given.connect(_on_dialogue_interact_pizza_given)
+	
 	if not Engine.is_editor_hint():
 		add_to_group("dialogue_actionables")
 		Engine.get_singleton("DialogueManager").dialogue_ended.connect(_on_dialogue_ended)
@@ -54,6 +62,10 @@ func action() -> void:
 		dialogue_balloon = start_dialogue.call(dialogue_resource, dialogue_cue, [{ actionable = self }, owner])
 	actioned.emit()
 
+
+func pizza_action() -> void:
+	pass
+	
 
 ## Find the nearest [DialogueActionable2D] to a given position.
 static func get_nearest_actionable_to(target_position: Vector2) -> DialogueActionable2D:
@@ -80,3 +92,16 @@ func _on_dialogue_ended(ending_dialogue_resource: DialogueResource) -> void:
 
 
 #endregion
+
+
+func _on_dialogue_interact_pizza_given() -> void:
+	print("this is getting called")
+	if is_tutorial && !StoryFlags.detective_given_pizza:
+		if is_instance_valid(dialogue_resource):
+			dialogue_balloon = start_dialogue.call(dialogue_resource, "tutorial_pizza", [{ actionable = self }, owner])
+		actioned.emit()
+		return
+	else:
+		if is_instance_valid(dialogue_resource):
+			dialogue_balloon = start_dialogue.call(dialogue_resource, "default_pizza", [{ actionable = self }, owner])
+		actioned.emit()

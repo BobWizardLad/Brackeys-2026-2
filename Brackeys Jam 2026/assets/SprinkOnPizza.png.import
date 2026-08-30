@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d0uu102yepvf4"
-path="res://.godot/imported/bathroom.png-2d71625370d8b88fc8fda0c90f2e5a76.ctex"
+uid="uid://de6alwou750u6"
+path="res://.godot/imported/SprinkOnPizza.png-1bba07762e4ade262533a10529eddc15.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/bathroom.png"
-dest_files=["res://.godot/imported/bathroom.png-2d71625370d8b88fc8fda0c90f2e5a76.ctex"]
+source_file="res://assets/SprinkOnPizza.png"
+dest_files=["res://.godot/imported/SprinkOnPizza.png-1bba07762e4ade262533a10529eddc15.ctex"]
 
 [params]
 

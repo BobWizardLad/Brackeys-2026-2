@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=18
+type="Resource"
+uid="uid://optdwm1sava2"
+path="res://.godot/imported/KitchenTutorial.dialogue-51ccb679bd9aaf370d0fb1d52b894559.tres"
+
+[deps]
+
+source_file="res://resources/dialouge/KitchenTutorial.dialogue"
+dest_files=["res://.godot/imported/KitchenTutorial.dialogue-51ccb679bd9aaf370d0fb1d52b894559.tres"]
+
+[params]
+
+defaults=true

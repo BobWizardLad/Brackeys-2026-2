@@ -1,9 +1,11 @@
 [gd_scene format=3 uid="uid://pwi7g1yepf8d"]
 
 [ext_resource type="Texture2D" uid="uid://ban455jvvw5o3" path="res://assets/RawDough.png" id="1_b0wbf"]
-[ext_resource type="Texture2D" uid="uid://u4d80ugt8gds" path="res://assets/MetalCountertop.jpg" id="1_syphw"]
+[ext_resource type="Script" uid="uid://ds3d5c8kihk6n" path="res://scripts/pizza_minigame.gd" id="1_bjvuv"]
 [ext_resource type="Script" uid="uid://4eqmd636sx8x" path="res://scripts/rollable_dough.gd" id="2_g5dih"]
+[ext_resource type="Resource" uid="uid://optdwm1sava2" path="res://resources/dialouge/KitchenTutorial.dialogue" id="2_r5040"]
 [ext_resource type="Texture2D" uid="uid://cdf3ivtmslrw4" path="res://assets/PizzaDough.png" id="2_syphw"]
+[ext_resource type="Texture2D" uid="uid://df6pi7psg320t" path="res://assets/StockKitchen.jpg" id="2_tbsuk"]
 [ext_resource type="Texture2D" uid="uid://cnm7hfyqeu585" path="res://assets/RollingPin.png" id="3_7xdo8"]
 [ext_resource type="Script" uid="uid://bbn5mn3uhxwgd" path="res://scripts/rolling_pin_object.gd" id="4_7xdo8"]
 [ext_resource type="Texture2D" uid="uid://b7cnrec23kcqd" path="res://assets/SauceOnPizza.png" id="5_wgbea"]
@@ -12,119 +14,145 @@
 [ext_resource type="Texture2D" uid="uid://cfbjg258n40p1" path="res://assets/PizzaSauce.png" id="7_we0hp"]
 [ext_resource type="Texture2D" uid="uid://bnjx22tc1g5l8" path="res://assets/Pepperoni.png" id="8_ijvue"]
 [ext_resource type="Texture2D" uid="uid://do2a54e2owhqt" path="res://assets/Mozzarella.jpg" id="9_o30f0"]
+[ext_resource type="Texture2D" uid="uid://de6alwou750u6" path="res://assets/SprinkOnPizza.png" id="9_tbsuk"]
 [ext_resource type="Texture2D" uid="uid://btapypnbjm00l" path="res://assets/ExitDoor.png" id="10_a7182"]
 [ext_resource type="Script" uid="uid://dquvef2yvkf2d" path="res://scripts/enter_new_scene_interact.gd" id="10_m0jyh"]
 [ext_resource type="Script" uid="uid://cttqrg8y8svr1" path="res://scripts/draggable_objects.gd" id="10_n74h8"]
+[ext_resource type="Texture2D" uid="uid://b3lxdi6bx8a2n" path="res://assets/Sprink.png" id="14_r5040"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7xdo8"]
-radius = 50.249413
+radius = 111.040535
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3jjgn"]
-radius = 42.0
-height = 334.0
+radius = 71.00006
+height = 638.00024
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h0gde"]
-size = Vector2(79, 103)
+size = Vector2(146.00002, 192.99998)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tbsuk"]
+size = Vector2(146.00002, 192.99998)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r5040"]
+size = Vector2(123, 144)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o30f0"]
-size = Vector2(79, 103)
+size = Vector2(104, 139)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3jjgn"]
-size = Vector2(124, 138)
+size = Vector2(205, 249)
 
 [node name="PizzaMinigame" type="Node2D" unique_id=584060788]
+script = ExtResource("1_bjvuv")
+dialogue_resource = ExtResource("2_r5040")
+dialogue_cue = "start"
 
 [node name="MetalCountertop" type="Sprite2D" parent="." unique_id=698525358]
-position = Vector2(957.00006, 535)
-scale = Vector2(1.8619571, 1.8619571)
-texture = ExtResource("1_syphw")
+position = Vector2(961, 465)
+scale = Vector2(3.6559784, 3.6559784)
+texture = ExtResource("2_tbsuk")
 
-[node name="Area2D" type="Area2D" parent="." unique_id=1037536402]
-position = Vector2(361.99997, 437.99997)
+[node name="PizzaObject" type="Area2D" parent="." unique_id=1037536402]
+position = Vector2(827, 901)
 scale = Vector2(0.99999994, 0.99999994)
 script = ExtResource("2_g5dih")
 max_scale = Vector2(2, 2)
 flattened_texture = ExtResource("2_syphw")
 
-[node name="Sprite2D" type="Sprite2D" parent="Area2D" unique_id=806278674]
-scale = Vector2(0.5, 0.5)
+[node name="Dough" type="Sprite2D" parent="PizzaObject" unique_id=806278674]
 texture = ExtResource("1_b0wbf")
 
-[node name="SauceOnPizza" type="Sprite2D" parent="Area2D" unique_id=168442095]
+[node name="SauceOnPizza" type="Sprite2D" parent="PizzaObject" unique_id=168442095]
 visible = false
-scale = Vector2(0.5, 0.5)
 texture = ExtResource("5_wgbea")
 
-[node name="PepOnPizza" type="Sprite2D" parent="Area2D" unique_id=1464241950]
+[node name="PepOnPizza" type="Sprite2D" parent="PizzaObject" unique_id=1464241950]
 visible = false
-scale = Vector2(0.5, 0.5)
 texture = ExtResource("6_n74h8")
 
-[node name="CheeseOnPizza" type="Sprite2D" parent="Area2D" unique_id=854101745]
+[node name="CheeseOnPizza" type="Sprite2D" parent="PizzaObject" unique_id=854101745]
 visible = false
-scale = Vector2(0.5, 0.5)
 texture = ExtResource("7_bjvuv")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=900525329]
+[node name="SprinkOnPizza" type="Sprite2D" parent="PizzaObject" unique_id=1195596026]
+visible = false
+texture = ExtResource("9_tbsuk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PizzaObject" unique_id=900525329]
 shape = SubResource("CircleShape2D_7xdo8")
 
 [node name="RollingPinObject" type="Area2D" parent="." unique_id=1001255058 groups=["rolling_pin"]]
-position = Vector2(937, 118.99994)
-rotation = -0.7853982
+position = Vector2(1557, 892.00006)
+rotation = -0.5235988
 scale = Vector2(0.99999994, 0.99999994)
 script = ExtResource("4_7xdo8")
 
 [node name="RollingPin" type="Sprite2D" parent="RollingPinObject" unique_id=342043657]
+scale = Vector2(2, 2)
 texture = ExtResource("3_7xdo8")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RollingPinObject" unique_id=1025907009]
-position = Vector2(-12.020859, -0.7070632)
+position = Vector2(-17.67767, 10.606604)
 rotation = -0.7853982
 shape = SubResource("CapsuleShape2D_3jjgn")
 
-[node name="Area2D2" type="Area2D" parent="." unique_id=2025051624 groups=["sauce"]]
-position = Vector2(876, 266)
+[node name="SauceObject" type="Area2D" parent="." unique_id=2025051624 groups=["sauce"]]
+position = Vector2(315, 576)
 script = ExtResource("10_n74h8")
 
-[node name="PizzaSauce" type="Sprite2D" parent="Area2D2" unique_id=1499870563]
-scale = Vector2(0.042708334, 0.042708334)
+[node name="Sprite2D" type="Sprite2D" parent="SauceObject" unique_id=1499870563]
+scale = Vector2(0.08297176, 0.08297176)
 texture = ExtResource("7_we0hp")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2" unique_id=403712581]
-position = Vector2(0.5, 0.5)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SauceObject" unique_id=403712581]
+position = Vector2(-1, -1.5)
 shape = SubResource("RectangleShape2D_h0gde")
 
-[node name="Area2D3" type="Area2D" parent="." unique_id=505205693 groups=["pep"]]
-position = Vector2(707, 353)
+[node name="SprinkObject" type="Area2D" parent="." unique_id=399620681 groups=["sprink"]]
+position = Vector2(2478, 152)
 script = ExtResource("10_n74h8")
 
-[node name="PizzaSauce" type="Sprite2D" parent="Area2D3" unique_id=1700113105]
-scale = Vector2(0.11059389, 0.11059389)
+[node name="Sprite2D" type="Sprite2D" parent="SprinkObject" unique_id=2053246599]
+scale = Vector2(0.438, 0.438)
+texture = ExtResource("14_r5040")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SprinkObject" unique_id=1475999147]
+position = Vector2(0.5, 0.5)
+shape = SubResource("RectangleShape2D_tbsuk")
+
+[node name="PepObject" type="Area2D" parent="." unique_id=505205693 groups=["pep"]]
+position = Vector2(160, 80)
+script = ExtResource("10_n74h8")
+
+[node name="Sprite2D" type="Sprite2D" parent="PepObject" unique_id=1700113105]
+scale = Vector2(0.18157001, 0.18157001)
 texture = ExtResource("8_ijvue")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D3" unique_id=674623274]
-shape = SubResource("RectangleShape2D_o30f0")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PepObject" unique_id=674623274]
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_r5040")
 
-[node name="Area2D4" type="Area2D" parent="." unique_id=665768032 groups=["cheese"]]
-position = Vector2(506, 266)
+[node name="CheeseObject" type="Area2D" parent="." unique_id=665768032 groups=["cheese"]]
+position = Vector2(322, 74)
 script = ExtResource("10_n74h8")
 
-[node name="PizzaSauce" type="Sprite2D" parent="Area2D4" unique_id=627904738]
-scale = Vector2(0.11059389, 0.11059389)
+[node name="Sprite2D" type="Sprite2D" parent="CheeseObject" unique_id=627904738]
+scale = Vector2(0.13904618, 0.13904618)
 texture = ExtResource("9_o30f0")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D4" unique_id=1237491288]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CheeseObject" unique_id=1237491288]
+position = Vector2(-1, 1.5)
 shape = SubResource("RectangleShape2D_o30f0")
 
 [node name="ExitDoor" type="Area2D" parent="." unique_id=2114488517]
-position = Vector2(84, 975)
+position = Vector2(135, 919)
 script = ExtResource("10_m0jyh")
 target_scene_path = "res://scenes/pizza_joint_location.tscn"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ExitDoor" unique_id=2126691567]
-position = Vector2(0, 8)
-shape = SubResource("RectangleShape2D_3jjgn")
-
 [node name="ExitDoor" type="Sprite2D" parent="ExitDoor" unique_id=1559488006]
-scale = Vector2(0.6231324, 0.6231324)
+scale = Vector2(1.1504383, 1.1504383)
 texture = ExtResource("10_a7182")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ExitDoor" unique_id=2126691567]
+position = Vector2(-1.5, 10.5)
+shape = SubResource("RectangleShape2D_3jjgn")

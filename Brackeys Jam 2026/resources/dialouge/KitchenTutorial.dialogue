@@ -1,0 +1,28 @@
+~ start
+GOD: Welcome to the kitchen, I will now bless you with knowledge on how to create a pizza...
+Roadie: Why is God telling me how to make a pizza?
+GOD: SILENCE MORTAL, LEST YOU FACE MY RIGHTOUS WRATH!!!
+Roadie: Whatever, just tell me what to do.
+GOD: Good choice my child. Gaze upon my creation and feel no despair, it's actually quite simple :P
+GOD: First, you will want to reach out your cursor and grab onto the rolling pin with all your might. This will be the tool which you use to enact your will upon the dough.
+Roadie: Enact my will?
+GOD: I of couse mean roll the dough flat so that your other wills, which you will call toppings, can be enacted upon the pizza. Rejoice my child, for my sight is infinite.
+Roadie: Yeah but... enact my will?
+GOD: Oh my God, just use the cursor to drag the rolling pin onto the dough to flatten it into pizza shape, then you just drag whatever toppings you want onto the prepared dough.
+Roadie: Okay cool what about what when I'm finished?
+GOD: Just leave, as long as you've created a pizza with at least 2 toppings once you leave this place you will be able to drag the pizza onto whomever you choose to deliver the pizza.
+Roadie: Why 2 toppings?
+GOD: Did you just question me mortal?
+- NO
+	Roadie: Uhhh... no?
+	GOD: I thought so, go forth my child and be as myself, that is to say a creator.
+- YES
+	Roadie: I... I guess so?
+	GOD: You're lucky I literally invented grace, or I would smite you so hard.
+	Roadie: Thanks...
+	GOD: Leave me now, enact your will and create... pizza
+=> END
+
+~ cant_go_kitchen
+Roadie: Something is keeping me from the kitchen right now.
+=> END

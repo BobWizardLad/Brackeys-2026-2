@@ -7,7 +7,10 @@
 [ext_resource type="Texture2D" uid="uid://xih2kxip6h8v" path="res://assets/dining_back.png" id="4_u6ge7"]
 [ext_resource type="Texture2D" uid="uid://drcf3uj1u1fdb" path="res://assets/dining_front.png" id="6_u6ge7"]
 [ext_resource type="Texture2D" uid="uid://bjte5gitbqftg" path="res://assets/MoveArrow.png" id="6_wphoq"]
-[ext_resource type="Texture2D" uid="uid://l0700kwwla3v" path="res://assets/bathroom.png" id="8_u6ge7"]
+[ext_resource type="Texture2D" uid="uid://b3lxdi6bx8a2n" path="res://assets/Sprink.png" id="8_f6ju0"]
+[ext_resource type="Texture2D" uid="uid://cw1k8l0umxfk7" path="res://assets/bathroom.png" id="8_u6ge7"]
+[ext_resource type="Script" uid="uid://75kp4x0qokfq" path="res://scripts/pizza_ingredient_pickup.gd" id="8_vc7tx"]
+[ext_resource type="Resource" uid="uid://optdwm1sava2" path="res://resources/dialouge/KitchenTutorial.dialogue" id="8_ylyeo"]
 [ext_resource type="Resource" uid="uid://buantu5q5urcm" path="res://resources/dialouge/Allie.dialogue" id="10_er0sr"]
 [ext_resource type="Resource" uid="uid://byc4fxaco0utb" path="res://resources/dialouge/Robot.dialogue" id="12_c1vtd"]
 [ext_resource type="Resource" uid="uid://bmr4h21wuwh35" path="res://resources/dialouge/Detective.dialogue" id="12_c44aj"]
@@ -27,6 +30,7 @@
 [ext_resource type="PackedScene" uid="uid://ri22xm1drjk5" path="res://scenes/character/cop.tscn" id="25_nlabh"]
 [ext_resource type="AudioStream" uid="uid://dnywyguyfycbj" path="res://assets/music/GroovyMix3.mp3" id="26_c1ae3"]
 [ext_resource type="Resource" uid="uid://clwynfjg5cx8b" path="res://resources/dialouge/Cop.dialogue" id="26_t4x4a"]
+[ext_resource type="PackedScene" uid="uid://c2vo6ryw8gve1" path="res://scenes/pizza_object.tscn" id="30_r1w8e"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h0gde"]
 size = Vector2(164.99995, 262.7965)
@@ -40,6 +44,9 @@ size = Vector2(109.99998, 116.00001)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f6ju0"]
 size = Vector2(80.0229, 110.50758)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vc7tx"]
+size = Vector2(29.011452, 38.000004)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_drmyl"]
 size = Vector2(273.09357, 373.43945)
 
@@ -51,6 +58,7 @@ position = Vector2(960, 540)
 texture = ExtResource("2_u6ge7")
 
 [node name="Camera" type="Camera2D" parent="Lobby" unique_id=810336173]
+enabled = false
 
 [node name="Area2D" type="Area2D" parent="Lobby" unique_id=664696895 node_paths=PackedStringArray("new_camera")]
 position = Vector2(228.62988, -2.862998)
@@ -66,6 +74,7 @@ position = Vector2(3100, 540)
 texture = ExtResource("4_u6ge7")
 
 [node name="Camera" type="Camera2D" parent="MainArea1" unique_id=1495604287]
+enabled = false
 
 [node name="Area2D2" type="Area2D" parent="MainArea1" unique_id=1371962245 node_paths=PackedStringArray("new_camera")]
 position = Vector2(-544.0001, 70.000015)
@@ -102,6 +111,9 @@ position = Vector2(-117.00007, -12.999984)
 scale = Vector2(0.787276, 0.78727597)
 script = ExtResource("4_fubtq")
 target_scene_path = "res://scenes/pizza_minigame.tscn"
+kitchen_door = true
+dialogue_resource = ExtResource("8_ylyeo")
+dialogue_cue = "cant_go_kitchen"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MainArea2/Area2D2" unique_id=111362695]
 position = Vector2(1.2704775, -3.8106384)
@@ -118,6 +130,19 @@ new_camera = NodePath("../../Restroom/Camera")
 position = Vector2(1.2704775, -3.8106384)
 scale = Vector2(1.0000005, 1)
 shape = SubResource("RectangleShape2D_f6ju0")
+
+[node name="Area2D5" type="Area2D" parent="MainArea2" unique_id=459329455]
+position = Vector2(415.99994, 63.000015)
+script = ExtResource("8_vc7tx")
+
+[node name="Sprite2D" type="Sprite2D" parent="MainArea2/Area2D5" unique_id=1136013787]
+scale = Vector2(0.165, 0.165)
+texture = ExtResource("8_f6ju0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MainArea2/Area2D5" unique_id=1744390590]
+position = Vector2(0.5058594, -1)
+scale = Vector2(1.0000005, 1)
+shape = SubResource("RectangleShape2D_vc7tx")
 
 [node name="Area2D3" type="Area2D" parent="MainArea2" unique_id=516403052 node_paths=PackedStringArray("new_camera")]
 position = Vector2(850, 438.99997)
@@ -137,6 +162,7 @@ position = Vector2(960, 1700)
 texture = ExtResource("8_u6ge7")
 
 [node name="Camera" type="Camera2D" parent="Restroom" unique_id=2107330729]
+enabled = false
 
 [node name="Area2D2" type="Area2D" parent="Restroom" unique_id=1078446130 node_paths=PackedStringArray("new_camera")]
 position = Vector2(289.00012, 11.000016)
@@ -195,6 +221,19 @@ dialogue_cue = "start"
 position = Vector2(366, 1835)
 dialogue_resource = ExtResource("12_c44aj")
 dialogue_cue = "start"
+is_tutorial = true
+
+[node name="PizzaObject" parent="." unique_id=978884050 instance=ExtResource("30_r1w8e")]
+position = Vector2(4440, 950)
+
+[node name="PizzaObject2" parent="." unique_id=1902158245 instance=ExtResource("30_r1w8e")]
+position = Vector2(3228, 957)
+
+[node name="PizzaObject3" parent="." unique_id=273214298 instance=ExtResource("30_r1w8e")]
+position = Vector2(1018, 936)
+
+[node name="PizzaObject4" parent="." unique_id=784035292 instance=ExtResource("30_r1w8e")]
+position = Vector2(1363, 2103)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=2019404600]
 stream = ExtResource("26_c1ae3")

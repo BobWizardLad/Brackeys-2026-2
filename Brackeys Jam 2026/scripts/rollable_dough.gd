@@ -1,16 +1,19 @@
 extends Draggable_Object
+class_name PizzaCookingObject
 
 @export var max_scale: Vector2 = Vector2(1.5, 1.5)
 @export var grow_duration: float = 1.0
 @export var flattened_texture: Texture2D
 
-@onready var sprite: Sprite2D = $Sprite2D
+@onready var dough: Sprite2D = $Dough
 @onready var sauce: Sprite2D = $SauceOnPizza
 @onready var pep: Sprite2D = $PepOnPizza
 @onready var cheese: Sprite2D = $CheeseOnPizza
+@onready var sprink: Sprite2D = $SprinkOnPizza
 
 var is_growing: bool = false
 var has_flattened: bool = false
+var ingredient_count: int = 0
 
 func _ready() -> void:
 	super()
@@ -19,12 +22,23 @@ func _ready() -> void:
 func _on_area_entered(area: Area2D) -> void:
 	if area.is_in_group("rolling_pin"):
 		start_growing()
-	if area.is_in_group("sauce"):
-		sauce.visible = true
-	if area.is_in_group("pep"):
-		pep.visible = true
-	if area.is_in_group("cheese"):
-		cheese.visible = true
+	if has_flattened:
+		if area.is_in_group("sauce"):
+			if !sauce.visible:
+				ingredient_count = ingredient_count + 1
+			sauce.visible = true
+		if area.is_in_group("pep"):
+			if !pep.visible:
+				ingredient_count = ingredient_count + 1
+			pep.visible = true
+		if area.is_in_group("cheese"):
+			if !cheese.visible:
+				ingredient_count = ingredient_count + 1
+			cheese.visible = true
+		if area.is_in_group("sprink"):
+			if !sprink.visible:
+				ingredient_count = ingredient_count + 1
+			sprink.visible = true
 
 func start_growing() -> void:
 	if is_growing or has_flattened:
@@ -41,6 +55,6 @@ func start_growing() -> void:
 
 func _change_sprite() -> void:
 	if flattened_texture:
-		sprite.texture = flattened_texture
+		dough.texture = flattened_texture
 	has_flattened = true
 	is_growing = false

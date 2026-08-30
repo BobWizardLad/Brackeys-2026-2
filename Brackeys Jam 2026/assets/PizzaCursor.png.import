@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d0uu102yepvf4"
-path="res://.godot/imported/bathroom.png-2d71625370d8b88fc8fda0c90f2e5a76.ctex"
+uid="uid://v2m3ajisjs7m"
+path="res://.godot/imported/PizzaCursor.png-7f2c00322d5c1a8ee022feec6e2d0083.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/bathroom.png"
-dest_files=["res://.godot/imported/bathroom.png-2d71625370d8b88fc8fda0c90f2e5a76.ctex"]
+source_file="res://assets/PizzaCursor.png"
+dest_files=["res://.godot/imported/PizzaCursor.png-7f2c00322d5c1a8ee022feec6e2d0083.ctex"]
 
 [params]
 
