@@ -22,3 +22,7 @@ GOD: Did you just question me mortal?
 	Roadie: Thanks...
 	GOD: Leave me now, enact your will and create... pizza
 => END
+
+~ cant_go_kitchen
+Roadie: Something is keeping me from the kitchen right now.
+=> END

@@ -7,7 +7,7 @@ func _ready() -> void:
 	pass
 
 
-func change_camera(target_camera) -> void:
+func change_camera(target_camera: Camera2D) -> void:
 	# Block input during transition
 	color_rect.mouse_filter = Control.MOUSE_FILTER_STOP
 	
@@ -16,7 +16,10 @@ func change_camera(target_camera) -> void:
 	await animation_player.animation_finished
 	
 	# Change scene while screen is black
+	target_camera.enabled = true
 	target_camera.make_current()
+
+	StoryFlags.moved_camera.emit()
 	
 	# Fade in
 	animation_player.play("fade_to_normal")

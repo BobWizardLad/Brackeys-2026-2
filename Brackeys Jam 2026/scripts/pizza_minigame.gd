@@ -1,6 +1,8 @@
 extends Node2D
 
 @onready var sprink: Area2D = $Sprink
+@onready var exit_door: EnterNewSceneInteract = $ExitDoor
+@onready var pizza_cooking_object: PizzaCookingObject = $PizzaObject
 
 ## The [DialogueResource] to use when starting dialogue.
 @export var dialogue_resource: DialogueResource = null:
@@ -23,6 +25,7 @@ static var start_dialogue: Callable = func(with_dialogue_resource: DialogueResou
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	exit_door.leaving.connect(_prepare_pizza_on_leave)
 	if StoryFlags.has_sprinkles:
 		sprink.position = Vector2(900, 640)
 
@@ -33,6 +36,21 @@ func _ready() -> void:
 		StoryFlags.entered_kitchen_first_time = true
 	# actioned.emit()
 
+
+func _prepare_pizza_on_leave() -> void:
+	if pizza_cooking_object.ingredient_count < 2:
+		return
+	var cookedPizza = PizzaObject.new()
+	if pizza_cooking_object.sauce.visible:
+		cookedPizza.has_sauce = true
+	if pizza_cooking_object.cheese.visible:
+		cookedPizza.has_cheese = true
+	if pizza_cooking_object.pep.visible:
+		cookedPizza.has_pep = true
+	if pizza_cooking_object.sprink.visible:
+		cookedPizza.has_sprinkles = true
+	
+	StoryFlags.current_pizza = cookedPizza
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

@@ -2,7 +2,7 @@
 if not StoryFlags.met_detective
 	=> first_chat
 else
-	=> nothing_to_say
+	=> tutorial
 
 ~ first_chat
 : The first stall is occupied, which isn't weird on any other day
@@ -54,6 +54,7 @@ Detective: Even so, you need to take this case
 $> DialogueMoodManager.speaker_mood = DialogueMoodManager.MOOD.DISSAPOINTED
 Detective: Your evening depends on it
 $> DialogueMoodManager.speaker_mood = DialogueMoodManager.MOOD.NEUTRAL
+Detective: If you're up for it, talk to me again and I can give you some direction
 $> StoryFlags.met_detective = true
 => END
 
@@ -63,6 +64,8 @@ Roadie: A pizza?
 Detective: yea, make me any pizza you fancy, i'm not picky
 Roadie: Is that what detectives do?
 Detective: It's what you'll do tonight! Pizza makes people honest. Remeber that!
+: You can now enter the kitchen
+$> StoryFlags.detective_ready_for_pizza = true
 => END
 
 ~ tutorial_pizza

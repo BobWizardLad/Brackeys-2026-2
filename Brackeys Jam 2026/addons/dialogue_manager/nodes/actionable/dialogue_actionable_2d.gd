@@ -55,6 +55,11 @@ func action() -> void:
 	actioned.emit()
 
 
+func pizza_action() -> void:
+	if is_instance_valid(dialogue_resource) and not dialogue_cue.is_empty():
+		dialogue_balloon = start_dialogue.call(dialogue_resource, dialogue_cue, [{ actionable = self }, owner])
+	actioned.emit()
+
 ## Find the nearest [DialogueActionable2D] to a given position.
 static func get_nearest_actionable_to(target_position: Vector2) -> DialogueActionable2D:
 	var nearest_distance: float = INF

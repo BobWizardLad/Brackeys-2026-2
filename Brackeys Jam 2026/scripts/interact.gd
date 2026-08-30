@@ -21,4 +21,5 @@ func left_click_down() -> void:
 func left_click_up() -> void:
     return
 
-
+func pizza_interact(pizza: PizzaObject) -> void:
+    return
