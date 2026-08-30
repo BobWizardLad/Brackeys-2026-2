@@ -19,7 +19,6 @@ config/icon="uid://v2m3ajisjs7m"
 [autoload]
 
 DialogueManager="*uid://c3rodes2l3gxb"
-StoryService="*uid://dqhtmjwp4uuhu"
 CURSOR="*uid://r5v6rorx0d7d"
 SCENE_TRANSITION="*uid://2eanck2m0l07"
 DialogueMoodManager="*uid://ctmyfxwl3fnha"
@@ -44,6 +43,7 @@ project/assembly_name="Brackeys Jam 2026"
 [editor]
 
 movie_writer/movie_file="/home/bobwizardlad/Videos/gd_output.ogv"
+export/convert_text_resources_to_binary=false
 
 [editor_plugins]
 
