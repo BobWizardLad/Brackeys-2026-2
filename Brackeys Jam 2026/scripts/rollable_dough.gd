@@ -10,6 +10,7 @@ class_name PizzaCookingObject
 @onready var pep: Sprite2D = $PepOnPizza
 @onready var cheese: Sprite2D = $CheeseOnPizza
 @onready var sprink: Sprite2D = $SprinkOnPizza
+@onready var bolts: Sprite2D = $BoltsOnPizza
 
 var is_growing: bool = false
 var has_flattened: bool = false
@@ -39,6 +40,10 @@ func _on_area_entered(area: Area2D) -> void:
 			if !sprink.visible:
 				ingredient_count = ingredient_count + 1
 			sprink.visible = true
+		if area.is_in_group("bolts"):
+			if !bolts.visible:
+				ingredient_count = ingredient_count + 1
+			bolts.visible = true
 
 func start_growing() -> void:
 	if is_growing or has_flattened:

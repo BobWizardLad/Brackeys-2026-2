@@ -1,8 +1,10 @@
 ~ start
 if not StoryFlags.met_detective
 	=> first_chat
-else
+if not StoryFlags.detective_given_pizza
 	=> tutorial
+else
+	=> nothing_to_say
 
 ~ first_chat
 : The first stall is occupied, which isn't weird on any other day
@@ -72,6 +74,9 @@ Detective: Everyone has a favorite topping
 Roadie: Like toilet bolts?
 Detective: Who would eat a piece of metal kid? I don't know, give it a shot
 Roadie: You're the expert...
+: Bolts have appeared in the kitchen
+$> StoryFlags.has_bolts = true
+$> StoryFlags.detective_given_pizza = true
 => END
 
 ~ default_pizza

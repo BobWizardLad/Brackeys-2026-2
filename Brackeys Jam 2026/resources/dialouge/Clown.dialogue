@@ -35,3 +35,9 @@ Clown: I made a ballon animal model of the suspect!
 Clown: Between you and me I really think he did it
 Roadie: Thanks for the help.. I'll come back when I have a question for you.
 => END
+
+~ default_pizza
+Clown: If only this pizza were made of ballons or cotton candy!
+Roadie: Sorry fresh out.
+Clown: Oh well I'll just keep standing here then.
+=> END

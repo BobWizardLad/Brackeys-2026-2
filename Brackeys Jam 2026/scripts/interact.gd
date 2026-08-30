@@ -9,7 +9,7 @@ func _area_entered(area: Area2D) -> void:
     if area is CursorScript:
         area.left_click_down.connect(left_click_down)
         area.left_click_up.connect(left_click_up)
-    if area is PizzaObject:
+    if area is PizzaObject && is_in_group("character"):
         area.position = Vector2(-100, -100)
         area.stop_dragging()
         pizza_interact()

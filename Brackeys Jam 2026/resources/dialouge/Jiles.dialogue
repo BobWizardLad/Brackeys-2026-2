@@ -20,3 +20,9 @@ Roadie: Nothing, just wanted to check in
 Jiles: Well, you've checked in. Just leave me to some peace until you have something to say
 Roadie: Alright.
 => END
+
+~ default_pizza
+Jiles: Perks of using the company card, thanks for the pizza.
+Roadie: I scratch your back you scratch mine?
+Jiles: Maybe not during the game jam
+=> END

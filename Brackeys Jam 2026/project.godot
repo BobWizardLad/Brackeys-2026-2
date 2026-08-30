@@ -48,6 +48,10 @@ movie_writer/movie_file="/home/bobwizardlad/Videos/gd_output.ogv"
 
 enabled=PackedStringArray("res://addons/dialogue_manager/plugin.cfg")
 
+[global_group]
+
+character=""
+
 [input]
 
 dialogs_continue_action={

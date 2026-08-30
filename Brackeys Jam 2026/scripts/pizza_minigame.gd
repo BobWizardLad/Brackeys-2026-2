@@ -1,6 +1,7 @@
 extends Node2D
 
-@onready var sprink: Area2D = $Sprink
+@onready var sprink: Area2D = $SprinkObject
+@onready var bolts: Area2D = $BoltObject
 @onready var exit_door: EnterNewSceneInteract = $ExitDoor
 @onready var pizza_cooking_object: PizzaCookingObject = $PizzaObject
 
@@ -28,6 +29,9 @@ func _ready() -> void:
 	exit_door.leaving.connect(_prepare_pizza_on_leave)
 	if StoryFlags.has_sprinkles:
 		sprink.position = Vector2(900, 640)
+	if StoryFlags.has_bolts:
+		bolts.position = Vector2(657, 572)
+
 
 	if !StoryFlags.entered_kitchen_first_time:
 		if is_instance_valid(dialogue_resource) and not dialogue_cue.is_empty():
@@ -49,6 +53,8 @@ func _prepare_pizza_on_leave() -> void:
 		cookedPizza.has_pep = true
 	if pizza_cooking_object.sprink.visible:
 		cookedPizza.has_sprinkles = true
+	if pizza_cooking_object.bolts.visible:
+		cookedPizza.has_bolts = true
 	
 	StoryFlags.current_pizza = cookedPizza
 

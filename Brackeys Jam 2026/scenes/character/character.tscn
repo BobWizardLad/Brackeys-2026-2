@@ -9,19 +9,20 @@ size = Vector2(144, 144)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r2iom"]
 size = Vector2(138, 136)
 
-[node name="Character" type="Area2D" unique_id=1751958569]
+[node name="Character" type="Area2D" unique_id=1751958569 groups=["character"]]
 script = ExtResource("2_mutn8")
 metadata/_custom_type_script = "uid://cqcur1rm7433g"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1367191582]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1367191582 groups=["character"]]
 position = Vector2(0, -1)
 shape = SubResource("RectangleShape2D_smi8u")
 
-[node name="DialogueInteract" type="Area2D" parent="." unique_id=329435777]
+[node name="DialogueInteract" type="Area2D" parent="." unique_id=329435777 groups=["character"]]
 script = ExtResource("1_mutn8")
+wants_pizza = true
 metadata/_custom_type_script = "uid://bstme3dsxbcrj"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="DialogueInteract" unique_id=1771493397]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DialogueInteract" unique_id=1771493397 groups=["character"]]
 position = Vector2(0, -1)
 shape = SubResource("RectangleShape2D_r2iom")
 

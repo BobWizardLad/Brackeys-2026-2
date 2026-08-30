@@ -30,7 +30,7 @@ signal dialogue_ended()
 ## The target cue to start dialogue from.
 @export var dialogue_cue: String = ""
 
-enum IngredientChoice { SPRINKLES, ANCHOVIES, PINEAPPLES }
+enum IngredientChoice { BOLTS, ANCHOVIES, PINEAPPLES, TUTORIAL }
 
 @export var ingredient: IngredientChoice
 
@@ -96,12 +96,35 @@ func _on_dialogue_ended(ending_dialogue_resource: DialogueResource) -> void:
 
 func _on_dialogue_interact_pizza_given() -> void:
 	print("this is getting called")
+	match ingredient:
+		IngredientChoice.BOLTS:
+			if is_instance_valid(dialogue_resource) && StoryFlags.current_pizza.has_bolts:
+				print("calling for bolt pizza")
+				dialogue_balloon = start_dialogue.call(dialogue_resource, "bolt_pizza", [{ actionable = self }, owner])
+			elif is_instance_valid(dialogue_resource):
+				print("calling for regular pizza", StoryFlags.current_pizza.has_bolts)
+				dialogue_balloon = start_dialogue.call(dialogue_resource, "default_pizza", [{ actionable = self }, owner])
+			actioned.emit()
+			StoryFlags.current_pizza = null
+			return
+		IngredientChoice.ANCHOVIES:
+			print("Equipping staff and spellbook!")
+			# Code for magician...
+			
+		IngredientChoice.PINEAPPLES:
+			print("Equipping daggers!")
+			# Code for thief...
+			
+		_:
+			print("This is the default fallback case (wildcard).")
+
 	if is_tutorial && !StoryFlags.detective_given_pizza:
 		if is_instance_valid(dialogue_resource):
 			dialogue_balloon = start_dialogue.call(dialogue_resource, "tutorial_pizza", [{ actionable = self }, owner])
 		actioned.emit()
-		return
 	else:
 		if is_instance_valid(dialogue_resource):
 			dialogue_balloon = start_dialogue.call(dialogue_resource, "default_pizza", [{ actionable = self }, owner])
 		actioned.emit()
+	
+	StoryFlags.current_pizza = null

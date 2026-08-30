@@ -18,7 +18,9 @@
 [ext_resource type="Texture2D" uid="uid://btapypnbjm00l" path="res://assets/ExitDoor.png" id="10_a7182"]
 [ext_resource type="Script" uid="uid://dquvef2yvkf2d" path="res://scripts/enter_new_scene_interact.gd" id="10_m0jyh"]
 [ext_resource type="Script" uid="uid://cttqrg8y8svr1" path="res://scripts/draggable_objects.gd" id="10_n74h8"]
+[ext_resource type="Texture2D" uid="uid://nmevqadpdf05" path="res://assets/BoltsOnPizza.png" id="11_4ctff"]
 [ext_resource type="Texture2D" uid="uid://b3lxdi6bx8a2n" path="res://assets/Sprink.png" id="14_r5040"]
+[ext_resource type="Texture2D" uid="uid://c2k8peec7mghq" path="res://assets/Bolts.jpg" id="16_v6i2p"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7xdo8"]
 radius = 111.040535
@@ -32,6 +34,9 @@ size = Vector2(146.00002, 192.99998)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tbsuk"]
 size = Vector2(146.00002, 192.99998)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4ctff"]
+size = Vector2(235, 149)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r5040"]
 size = Vector2(123, 144)
@@ -57,6 +62,7 @@ position = Vector2(827, 901)
 scale = Vector2(0.99999994, 0.99999994)
 script = ExtResource("2_g5dih")
 max_scale = Vector2(2, 2)
+grow_duration = null
 flattened_texture = ExtResource("2_syphw")
 
 [node name="Dough" type="Sprite2D" parent="PizzaObject" unique_id=806278674]
@@ -77,6 +83,10 @@ texture = ExtResource("7_bjvuv")
 [node name="SprinkOnPizza" type="Sprite2D" parent="PizzaObject" unique_id=1195596026]
 visible = false
 texture = ExtResource("9_tbsuk")
+
+[node name="BoltsOnPizza" type="Sprite2D" parent="PizzaObject" unique_id=493205487]
+visible = false
+texture = ExtResource("11_4ctff")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PizzaObject" unique_id=900525329]
 shape = SubResource("CircleShape2D_7xdo8")
@@ -119,6 +129,18 @@ texture = ExtResource("14_r5040")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SprinkObject" unique_id=1475999147]
 position = Vector2(0.5, 0.5)
 shape = SubResource("RectangleShape2D_tbsuk")
+
+[node name="BoltObject" type="Area2D" parent="." unique_id=1968903688 groups=["bolts"]]
+position = Vector2(2524, 494)
+script = ExtResource("10_n74h8")
+
+[node name="Sprite2D" type="Sprite2D" parent="BoltObject" unique_id=1098190672]
+scale = Vector2(0.2699745, 0.2699745)
+texture = ExtResource("16_v6i2p")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BoltObject" unique_id=1899874802]
+position = Vector2(-0.5, -1.5)
+shape = SubResource("RectangleShape2D_4ctff")
 
 [node name="PepObject" type="Area2D" parent="." unique_id=505205693 groups=["pep"]]
 position = Vector2(160, 80)

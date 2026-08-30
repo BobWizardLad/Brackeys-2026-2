@@ -19,3 +19,9 @@ Roadie: Don't do this to me
 Cop: 25!
 Roadie: ...
 => END
+
+~ default_pizza
+Cop: No can do, accept pizza from a potential suspect what if its poisoned.
+Roadie: I work here.
+Cop: Thats what they all say, keep moving buddy
+=> END

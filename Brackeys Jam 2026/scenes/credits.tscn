@@ -1,0 +1,120 @@
+[gd_scene format=3 uid="uid://cipfv3npmmuvv"]
+
+[ext_resource type="AudioStream" uid="uid://ckywy8h3sfvsy" path="res://assets/music/Fall Leaves, Red Trees.mp3" id="1_0bpdh"]
+[ext_resource type="Script" uid="uid://bmxoo7sux5xb5" path="res://scripts/credits.gd" id="1_2ckv8"]
+
+[sub_resource type="Animation" id="Animation_0bpdh"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Control/RichTextLabel:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -2297)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AudioStreamPlayer2D:playing")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_yeqti"]
+resource_name = "roll_credits"
+length = 60.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Control/RichTextLabel:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 60),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 1204), Vector2(0, -2297)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AudioStreamPlayer2D:playing")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_0bpdh"]
+_data = {
+&"RESET": SubResource("Animation_0bpdh"),
+&"roll_credits": SubResource("Animation_yeqti")
+}
+
+[node name="Credits" type="CanvasLayer" unique_id=762823255]
+script = ExtResource("1_2ckv8")
+
+[node name="Control" type="Control" parent="." unique_id=1554796196]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="Control" unique_id=290483750]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control" unique_id=1578428457]
+custom_minimum_size = Vector2(1920, 0)
+layout_mode = 0
+offset_top = -2297.0
+offset_right = 1920.0
+offset_bottom = -89.0
+theme_override_font_sizes/normal_font_size = 70
+text = "Thanks for Playing our game!
+
+This is a demo concept for what we hope read as an interesting take on a point and click adventure!
+
+By unlocking this door you have completed the bare minimum, and met all the characters. If you want a little more to do, the detective prompts you to create a special pizza, maybe someone has something to say about it.
+
+
+
+A game by:
+BobWizardLad
+GreenBeast2005
+AmazingzMyster
+Auston \"AGMusic\"
+Noah \"TheFunnyBucket\"
+
+
+
+Thanks again, and good luck everyone!"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1282491615]
+libraries/ = SubResource("AnimationLibrary_0bpdh")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1005875354]
+stream = ExtResource("1_0bpdh")

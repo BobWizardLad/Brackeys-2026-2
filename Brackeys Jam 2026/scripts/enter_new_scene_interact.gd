@@ -4,6 +4,7 @@ class_name EnterNewSceneInteract
 @export var target_scene_path: String = ""
 
 @export var kitchen_door: bool = false
+@export var credits_door: bool = false
 
 ## The [DialogueResource] to use when starting dialogue.
 @export var dialogue_resource: DialogueResource = null:
@@ -27,9 +28,15 @@ signal leaving
 
 func left_click_down() -> void:
 	leaving.emit()
-	if !kitchen_door:
+	if !kitchen_door && !credits_door:
 		SCENE_TRANSITION.change_scene(target_scene_path)
-	else:
+	elif credits_door:
+		if StoryFlags.met_clown && StoryFlags.met_jiles && StoryFlags.met_harry && StoryFlags.met_robot && StoryFlags.met_fake_robot && StoryFlags.met_allie && StoryFlags.met_homes && StoryFlags.met_detective && StoryFlags.met_cop:
+			SCENE_TRANSITION.change_scene(target_scene_path)
+		else:
+			if is_instance_valid(dialogue_resource) and not dialogue_cue.is_empty():
+				dialogue_balloon = start_dialogue.call(dialogue_resource, dialogue_cue, [{ actionable = self }, owner])
+	elif kitchen_door:
 		if StoryFlags.detective_ready_for_pizza:
 			SCENE_TRANSITION.change_scene(target_scene_path)
 		else:

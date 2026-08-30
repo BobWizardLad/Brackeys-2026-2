@@ -29,6 +29,8 @@ func _ready() -> void:
         $CheeseOnPizza.visible = true
     if StoryFlags.current_pizza.has_sprinkles:
         $SprinkOnPizza.visible = true
+    if StoryFlags.current_pizza.has_bolts:
+        $BoltsOnPizza.visible = true
 
 func _reset_za_spot() -> void:
     if !StoryFlags.current_pizza:

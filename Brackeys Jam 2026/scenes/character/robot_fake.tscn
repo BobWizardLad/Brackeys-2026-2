@@ -148,7 +148,7 @@ metadata/_custom_type_script = "uid://cqcur1rm7433g"
 position = Vector2(-31.5, 5)
 shape = SubResource("RectangleShape2D_smi8u")
 
-[node name="DialogueInteract" type="Area2D" parent="." unique_id=329435777]
+[node name="DialogueInteract" type="Area2D" parent="." unique_id=329435777 groups=["character"]]
 script = ExtResource("2_p02qt")
 metadata/_custom_type_script = "uid://bstme3dsxbcrj"
 
