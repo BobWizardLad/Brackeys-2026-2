@@ -2,6 +2,8 @@ extends Node
 ## Persistent service that manages flags in the story that modify the game's state
 ## Handles the story beats that have been discovered.
 
+var entered_kitchen_first_time: bool
+
 var met_clown: bool
 var met_mole: bool
 var met_harry: bool
