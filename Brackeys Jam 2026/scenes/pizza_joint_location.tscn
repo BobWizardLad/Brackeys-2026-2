@@ -4,15 +4,13 @@
 [ext_resource type="Texture2D" uid="uid://mhlo2hl08ie6" path="res://assets/entrance_desk.png" id="2_u6ge7"]
 [ext_resource type="Script" uid="uid://d3chu6xx7ujdg" path="res://scripts/doorway_interact.gd" id="3_xic0v"]
 [ext_resource type="Script" uid="uid://dquvef2yvkf2d" path="res://scripts/enter_new_scene_interact.gd" id="4_fubtq"]
-[ext_resource type="Texture2D" uid="uid://cesamo5n465jt" path="res://assets/MainRoom1.png" id="5_xic0v"]
-[ext_resource type="Texture2D" uid="uid://c2v6lk2il7250" path="res://assets/MainRoom2.png" id="6_drmyl"]
+[ext_resource type="Texture2D" uid="uid://xih2kxip6h8v" path="res://assets/dining_back.png" id="4_u6ge7"]
+[ext_resource type="Texture2D" uid="uid://cg7pqgwn6knr5" path="res://assets/dining_front.png" id="6_u6ge7"]
 [ext_resource type="Texture2D" uid="uid://bjte5gitbqftg" path="res://assets/MoveArrow.png" id="6_wphoq"]
-[ext_resource type="Texture2D" uid="uid://c57unhxm4htor" path="res://assets/Bathroom.png" id="7_wphoq"]
-[ext_resource type="PackedScene" uid="uid://c0xf764tvu8r1" path="res://scenes/character/character.tscn" id="9_vc7tx"]
+[ext_resource type="Texture2D" uid="uid://518up0fs6x1u" path="res://assets/bathroom.png" id="8_u6ge7"]
 [ext_resource type="Resource" uid="uid://buantu5q5urcm" path="res://resources/dialouge/Allie.dialogue" id="10_er0sr"]
 [ext_resource type="Resource" uid="uid://byc4fxaco0utb" path="res://resources/dialouge/Robot.dialogue" id="12_c1vtd"]
 [ext_resource type="Resource" uid="uid://bmr4h21wuwh35" path="res://resources/dialouge/Detective.dialogue" id="12_c44aj"]
-[ext_resource type="Texture2D" uid="uid://p0j7s6xxaisg" path="res://assets/characters/detective0.png" id="12_r11lm"]
 [ext_resource type="Resource" uid="uid://bj8b83xputpvk" path="res://resources/dialouge/Clown.dialogue" id="13_u6ge7"]
 [ext_resource type="Resource" uid="uid://b15ytfhosx35g" path="res://resources/dialouge/Harry.dialogue" id="14_26rw3"]
 [ext_resource type="Resource" uid="uid://biqpraeutfjpw" path="res://resources/dialouge/RobotFake.dialogue" id="17_8jnav"]
@@ -25,6 +23,7 @@
 [ext_resource type="PackedScene" uid="uid://irkf6r54x18b" path="res://scenes/character/clown.tscn" id="22_c44aj"]
 [ext_resource type="Resource" uid="uid://dwn3oslayvdvw" path="res://resources/dialouge/Homes.dialogue" id="22_o7ihe"]
 [ext_resource type="Resource" uid="uid://2mircw0pf012" path="res://resources/dialouge/Jiles.dialogue" id="24_o7ihe"]
+[ext_resource type="PackedScene" uid="uid://caaw2li6ow604" path="res://scenes/character/detective.tscn" id="25_c1ae3"]
 [ext_resource type="PackedScene" uid="uid://ri22xm1drjk5" path="res://scenes/character/cop.tscn" id="25_nlabh"]
 [ext_resource type="AudioStream" uid="uid://dnywyguyfycbj" path="res://assets/music/GroovyMix3.mp3" id="26_c1ae3"]
 [ext_resource type="Resource" uid="uid://clwynfjg5cx8b" path="res://resources/dialouge/Cop.dialogue" id="26_t4x4a"]
@@ -64,7 +63,7 @@ shape = SubResource("RectangleShape2D_h0gde")
 
 [node name="MainArea1" type="Sprite2D" parent="." unique_id=1847311592]
 position = Vector2(3100, 540)
-texture = ExtResource("5_xic0v")
+texture = ExtResource("4_u6ge7")
 
 [node name="Camera" type="Camera2D" parent="MainArea1" unique_id=1495604287]
 
@@ -94,7 +93,7 @@ shape = SubResource("RectangleShape2D_wphoq")
 
 [node name="MainArea2" type="Sprite2D" parent="." unique_id=1471950999]
 position = Vector2(5200, 540)
-texture = ExtResource("6_drmyl")
+texture = ExtResource("6_u6ge7")
 
 [node name="Camera" type="Camera2D" parent="MainArea2" unique_id=1991939803]
 
@@ -135,7 +134,7 @@ shape = SubResource("RectangleShape2D_wphoq")
 
 [node name="Restroom" type="Sprite2D" parent="." unique_id=550089036]
 position = Vector2(960, 1700)
-texture = ExtResource("7_wphoq")
+texture = ExtResource("8_u6ge7")
 
 [node name="Camera" type="Camera2D" parent="Restroom" unique_id=2107330729]
 
@@ -146,21 +145,11 @@ script = ExtResource("3_xic0v")
 new_camera = NodePath("../../MainArea2/Camera")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Restroom/Area2D2" unique_id=1740129673]
-position = Vector2(3.175293, -27.944336)
+position = Vector2(-174.01796, -54.618744)
 scale = Vector2(1.0000005, 1)
 shape = SubResource("RectangleShape2D_drmyl")
 
 [node name="Characters" type="Node2D" parent="." unique_id=1523316892]
-
-[node name="Detective" parent="Characters" unique_id=132690246 instance=ExtResource("9_vc7tx")]
-position = Vector2(321, 1908)
-dialogue_resource = ExtResource("12_c44aj")
-dialogue_cue = "start"
-
-[node name="Sprite2D" type="Sprite2D" parent="Characters/Detective" unique_id=1411394869]
-position = Vector2(11, 16.00003)
-scale = Vector2(1.0045589, 1.173173)
-texture = ExtResource("12_r11lm")
 
 [node name="Clown" parent="Characters" unique_id=648583542 instance=ExtResource("22_c44aj")]
 position = Vector2(3483, 619)
@@ -198,8 +187,13 @@ dialogue_resource = ExtResource("24_o7ihe")
 dialogue_cue = "start"
 
 [node name="Cop" parent="Characters" unique_id=3237420 instance=ExtResource("25_nlabh")]
-position = Vector2(1701, 638)
+position = Vector2(1701, 903)
 dialogue_resource = ExtResource("26_t4x4a")
+dialogue_cue = "start"
+
+[node name="Character" parent="Characters" unique_id=1095833397 instance=ExtResource("25_c1ae3")]
+position = Vector2(366, 1835)
+dialogue_resource = ExtResource("12_c44aj")
 dialogue_cue = "start"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=2019404600]
