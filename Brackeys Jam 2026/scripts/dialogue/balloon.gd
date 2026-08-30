@@ -140,18 +140,22 @@ func apply_dialogue_line() -> void:
 	character_label.text = tr(dialogue_line.character, "dialogue")
 	# Applies a portrait for the given line of dialogue
 	var portrait_path: String = "res://resources/characters/%s.tres" % (dialogue_line.character.to_lower() + str(DialogueMoodManager.speaker_mood))
-	if FileAccess.file_exists(portrait_path):
+
+	# ResourceLoader handles path remapping inside exported builds
+	if ResourceLoader.exists(portrait_path):
 		portrait.texture = load(portrait_path)
 	else:
 		portrait.texture = null
+
 	# Applies an animation based on the mood of the speaker
-	if DialogueMoodManager.speaker_mood == 0 && FileAccess.file_exists(portrait_path):
+	if DialogueMoodManager.speaker_mood == 0 and ResourceLoader.exists(portrait_path):
 		%PortraitAnimationPlayer.current_animation = "talking"
 	else:
 		%PortraitAnimationPlayer.current_animation = "idle"
+
 	var typing_sfx_path: String = "res://assets/sfx/type.mp3"
-	# Applies the speaking sfx for a line of dialogue
-	if FileAccess.file_exists(typing_sfx_path):
+
+	if ResourceLoader.exists(typing_sfx_path):
 		typing_sound_player.stream = load(typing_sfx_path)
 	else:
 		typing_sound_player.stream = null

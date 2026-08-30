@@ -13,7 +13,8 @@ config_version=5
 config/name="Brackeys Jam 2026"
 run/main_scene="uid://csbe2bhoduekt"
 config/features=PackedStringArray("4.7", "GL Compatibility")
-config/icon="res://assets/icon.svg"
+boot_splash/image="uid://bgjrptgpnbtio"
+config/icon="uid://v2m3ajisjs7m"
 
 [autoload]
 
