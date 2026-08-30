@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://xih2kxip6h8v" path="res://assets/dining_back.png" id="4_u6ge7"]
 [ext_resource type="Texture2D" uid="uid://drcf3uj1u1fdb" path="res://assets/dining_front.png" id="6_u6ge7"]
 [ext_resource type="Texture2D" uid="uid://bjte5gitbqftg" path="res://assets/MoveArrow.png" id="6_wphoq"]
-[ext_resource type="Texture2D" uid="uid://518up0fs6x1u" path="res://assets/bathroom.png" id="8_u6ge7"]
+[ext_resource type="Texture2D" uid="uid://l0700kwwla3v" path="res://assets/bathroom.png" id="8_u6ge7"]
 [ext_resource type="Resource" uid="uid://buantu5q5urcm" path="res://resources/dialouge/Allie.dialogue" id="10_er0sr"]
 [ext_resource type="Resource" uid="uid://byc4fxaco0utb" path="res://resources/dialouge/Robot.dialogue" id="12_c1vtd"]
 [ext_resource type="Resource" uid="uid://bmr4h21wuwh35" path="res://resources/dialouge/Detective.dialogue" id="12_c44aj"]

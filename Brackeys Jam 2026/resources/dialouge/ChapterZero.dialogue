@@ -28,7 +28,7 @@ $> DialogueMoodManager.speaker_mood = DialogueMoodManager.MOOD.NEUTRAL
 => END
 
 ~ beginning
-$> CutsceneSequencer.overlay_scene("res://assets/Lobby 3D Perspective.png")
+$> CutsceneSequencer.overlay_scene("res://assets/parlor_cityscape.png")
 : New Sokyo, modern day, 2426.
 : Roadie was a plain, copy-paste pizza parlor cook
 : Clocking in to a regular Friday night at Mr. Pepperoncini's Pizza Parlor
