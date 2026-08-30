@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://drcf3uj1u1fdb" path="res://assets/dining_front.png" id="6_u6ge7"]
 [ext_resource type="Texture2D" uid="uid://bjte5gitbqftg" path="res://assets/MoveArrow.png" id="6_wphoq"]
 [ext_resource type="Texture2D" uid="uid://b3lxdi6bx8a2n" path="res://assets/Sprink.png" id="8_f6ju0"]
-[ext_resource type="Texture2D" uid="uid://cw1k8l0umxfk7" path="res://assets/bathroom.png" id="8_u6ge7"]
+[ext_resource type="Texture2D" uid="uid://d0uu102yepvf4" path="res://assets/bathroom.png" id="8_u6ge7"]
 [ext_resource type="Script" uid="uid://75kp4x0qokfq" path="res://scripts/pizza_ingredient_pickup.gd" id="8_vc7tx"]
 [ext_resource type="Resource" uid="uid://optdwm1sava2" path="res://resources/dialouge/KitchenTutorial.dialogue" id="8_ylyeo"]
 [ext_resource type="Resource" uid="uid://buantu5q5urcm" path="res://resources/dialouge/Allie.dialogue" id="10_er0sr"]
