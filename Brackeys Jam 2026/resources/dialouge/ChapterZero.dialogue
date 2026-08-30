@@ -28,6 +28,7 @@ $> DialogueMoodManager.speaker_mood = DialogueMoodManager.MOOD.NEUTRAL
 => END
 
 ~ beginning
+$> CutsceneSequencer.overlay_scene("res://assets/parlor_cityscape.png")
 : New Sokyo, modern day, 2426.
 : Roadie was a plain, copy-paste pizza parlor cook
 : Clocking in to a regular Friday night at Mr. Pepperoncini's Pizza Parlor
@@ -35,6 +36,7 @@ $> DialogueMoodManager.speaker_mood = DialogueMoodManager.MOOD.NEUTRAL
 : But I am, and this was not going to be a regular Friday...
 
 ~ end_of_the_shift
+$> CutsceneSequencer.overlay_scene("res://assets/MetalCountertop.jpg")
 Roadie: Pretty quiet night tonight, not bad
 Roadie: I think someone dropped a glass in the dining room or something though
 Roadie: I still need to talk to Mr. Pepperoncini about my two weeks notice
@@ -43,6 +45,7 @@ Roadie: Doesn't make the talk any less akward though
 Roadie: Here goes...
 
 ~ to_office
+$> CutsceneSequencer.overlay_scene("")
 Roadie: Mr. P?
 Roadie: Mr... Oh beans. OH BEANS MAN
 : Roadie had walked onto the scene of some kind of murder
@@ -51,9 +54,11 @@ Roadie: Mr... Oh beans. OH BEANS MAN
 Roadie: I-.. I have to call somebody!
 
 ~ fade_to_black_cops
+$> CutsceneSequencer.overlay_scene("")
 : Roadie called the authorities...
 
-~ cops_at_entrance
+~ cops_at_entrance 
+$> CutsceneSequencer.overlay_scene("res://assets/entrance_desk.png")
 Cop: Well, it's pretty bad
 Roadie: I saw myself, it's awful
 Cop: No, my hopes for dinner. I was gonna bring a pizza home tonight but then this guy went and died in my favorite pizza joint
@@ -66,7 +71,9 @@ Cop: But until then, i'll be here blocking the door. No exits, not exceptions.
 Cop: Hungry.
 Cop: Pizza-less.
 Roadie: Well, i'm gonna wash up a bit, I just got done working in the kitchen
+Roadie: Go to the stall, y'now
 Cop: Don't forget to flush
 Roadie: ...Thanks?
 Roadie: Bye.
+$> CutsceneSequencer.overlay_scene("")
 => END

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://l0700kwwla3v"
-path="res://.godot/imported/bathroom.png-2d71625370d8b88fc8fda0c90f2e5a76.ctex"
+uid="uid://bxaad7gc0c1fq"
+path="res://.godot/imported/parlor_cityscape.png-91877368cc541236ca07559078361deb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/bathroom.png"
-dest_files=["res://.godot/imported/bathroom.png-2d71625370d8b88fc8fda0c90f2e5a76.ctex"]
+source_file="res://assets/parlor_cityscape.png"
+dest_files=["res://.godot/imported/parlor_cityscape.png-91877368cc541236ca07559078361deb.ctex"]
 
 [params]
 
