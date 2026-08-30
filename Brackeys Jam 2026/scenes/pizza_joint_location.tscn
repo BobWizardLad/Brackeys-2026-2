@@ -221,6 +221,7 @@ dialogue_cue = "start"
 position = Vector2(366, 1835)
 dialogue_resource = ExtResource("12_c44aj")
 dialogue_cue = "start"
+is_tutorial = true
 
 [node name="PizzaObject" parent="." unique_id=978884050 instance=ExtResource("30_r1w8e")]
 position = Vector2(4440, 950)

@@ -1,6 +1,7 @@
 class_name DialogueInteract extends Interact
 
 signal clicked
+signal pizza_given
 
 func left_click_down() -> void:
 	clicked.emit()
@@ -9,5 +10,7 @@ func left_click_down() -> void:
 func left_click_up() -> void:
 	return
 
-func pizza_interact(pizza: PizzaObject) -> void:
+func pizza_interact() -> void:
+	print("given Pizza")
+	pizza_given.emit()
 	return

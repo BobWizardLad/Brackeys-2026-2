@@ -35,5 +35,6 @@ var solved_homes: bool
 var discussed_homes: bool
 
 var detective_ready_for_pizza: bool
+var detective_given_pizza: bool
 
 signal moved_camera

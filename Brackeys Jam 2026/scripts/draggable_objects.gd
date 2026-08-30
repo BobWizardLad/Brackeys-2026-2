@@ -22,3 +22,6 @@ func left_click_down() -> void:
 
 func left_click_up() -> void:
 	selected = false
+
+func stop_dragging() -> void:
+	selected = false
