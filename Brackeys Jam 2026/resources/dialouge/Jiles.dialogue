@@ -1,0 +1,22 @@
+~ start
+if not StoryFlags.met_jiles
+	=> first_dialogue
+else
+	=> nothing_to_say
+
+~ first_dialogue
+Roadie: Hey, what's your name?
+???: Huh? Oh-
+Jiles: Jiles. Real estate developer, and pizza consumer. Currently a captive suspect...
+Roadie: That's what I wanted to talk to you about. I'm on this murder case and need to ask some questions.
+Jiles: I just got here! Don't skew this investigation pal.
+Roadie: Gotta talk to everyone 'pal'
+$> StoryFlags.met_jiles = true
+=> END
+
+~ nothing_to_say
+Jiles: What now kid?
+Roadie: Nothing, just wanted to check in
+Jiles: Well, you've checked in. Just leave me to some peace until you have something to say
+Roadie: Alright.
+=> END

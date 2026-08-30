@@ -1,0 +1,37 @@
+~ start
+if not StoryFlags.met_clown
+	=> first_dialogue
+else
+	=> nothing_to_say
+
+~ first_dialogue
+???: HELLO LITTLE BOY
+Roadie: Whoa!-
+Clown: Can I make you a balloon animal? Ice cream cone? Clown nose?
+Roadie: How old do I look?
+Clown: You couldn't be a day over 5!
+Roadie: I'm 23...
+Clown: I count age in addition kid, it's so much fun!
+Roadie: I'm also the detective on this murder case
+Clown: OOOH YEAAA! That's why they locked me in here!
+Clown: *I thought we had the fun police raiding the joint*
+: The clown honks his nose
+Clown: Hehehe! I thought you were making pizzas in the kitchen. Pulling a double shift??
+Roadie: It's a... recent development
+Roadie: The detective is in a-
+Roadie: dire digestional disagreement.
+: The clown looks left, then looks right, then speaks past the back of his hand
+Clown: I see~
+Roadie: I'll be back to ask some questions, so don't go anywhere
+Clown: I'll get comfortable right here detective!
+: The clown stands straight up and makes a mocking salute
+Roadie: How many weirdoes slipped in tonight?
+$> StoryFlags.met_clown = true
+=> END
+
+~ nothing_to_say
+Clown: I made a ballon animal model of the suspect!
+: The clown has made a ballon animal giraffe wearing a black theif's mask
+Clown: Between you and me I really think he did it
+Roadie: Thanks for the help.. I'll come back when I have a question for you.
+=> END

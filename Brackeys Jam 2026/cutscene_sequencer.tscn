@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://cuax5rquucj74"]
+
+[ext_resource type="Script" uid="uid://db3i87h0avm1h" path="res://scripts/dialogue/cutscene_sequencer.gd" id="1_thxe5"]
+[ext_resource type="Texture2D" uid="uid://cesamo5n465jt" path="res://assets/MainRoom1.png" id="2_cok34"]
+
+[node name="CutsceneSequencer" type="CanvasLayer" unique_id=977761993]
+script = ExtResource("1_thxe5")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=226263076]
+texture = ExtResource("2_cok34")
+centered = false

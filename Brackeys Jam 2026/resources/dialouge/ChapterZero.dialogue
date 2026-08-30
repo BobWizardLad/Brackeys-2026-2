@@ -1,11 +1,4 @@
-~ beginning
-: New Sokyo, modern day, 2426.
-: Roadie was a plain, copy-paste pizza parlor cook
-: Clocking in to a regular Friday night at Mr. Pepperoncini's Pizza Parlor
-: Is what I would say if I wasn't about to narrate a story about murder, deception, and pizza toppings
-: But I am, and this was not going to be a regular Friday...
-
-~ fisrt_visit_inside
+~ first_visit_inside
 Roadie: Mr. P?
 : A camera lowers down from the ceiling. Mr. Pepperoncini's security system
 Roadie (mumbling): he must be in the office right now...
@@ -32,6 +25,14 @@ $> DialogueMoodManager.speaker_mood = DialogueMoodManager.MOOD.NEUTRAL
 : ...
 : ...
 : crash!
+=> END
+
+~ beginning
+: New Sokyo, modern day, 2426.
+: Roadie was a plain, copy-paste pizza parlor cook
+: Clocking in to a regular Friday night at Mr. Pepperoncini's Pizza Parlor
+: Is what I would say if I wasn't about to narrate a story about murder, deception, and pizza toppings
+: But I am, and this was not going to be a regular Friday...
 
 ~ end_of_the_shift
 Roadie: Pretty quiet night tonight, not bad
@@ -55,7 +56,7 @@ Roadie: I-.. I have to call somebody!
 ~ cops_at_entrance
 Cop: Well, it's pretty bad
 Roadie: I saw myself, it's awful
-Cop: No, my hopes for dinner. I was gonna bring a pizza home tonight but then this guy died in my favorite pizza joint
+Cop: No, my hopes for dinner. I was gonna bring a pizza home tonight but then this guy went and died in my favorite pizza joint
 Roadie: ...
 Cop: But yea, the murder too. That's pretty bad
 Cop: I hope you didn't plan on going anywhere tonight kid, it's gonna be some time before anyone leaves
@@ -68,15 +69,4 @@ Roadie: Well, i'm gonna wash up a bit, I just got done working in the kitchen
 Cop: Don't forget to flush
 Roadie: ...Thanks?
 Roadie: Bye.
-=> END
-
-~ meme
-Cop: Talk to mee
-Roadie: oooohh baby
-Harry: Talk to me
-Angel: Talk to mee
-Homes: oooohh baby
-Devil: Talk to me
-Robot: SO YOU THINK YOU ARE BETTER OFF ALONE?
-Robot?: boop beep beep beep boop
 => END

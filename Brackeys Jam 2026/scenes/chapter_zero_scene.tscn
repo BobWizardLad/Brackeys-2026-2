@@ -4,14 +4,31 @@
 [ext_resource type="PackedScene" uid="uid://c0xf764tvu8r1" path="res://scenes/character/character.tscn" id="2_7cd0w"]
 [ext_resource type="Resource" uid="uid://dww2186wkabi0" path="res://resources/dialouge/ChapterZero.dialogue" id="3_7cd0w"]
 [ext_resource type="Texture2D" uid="uid://c57unhxm4htor" path="res://assets/Bathroom.png" id="4_10c5f"]
+[ext_resource type="Script" uid="uid://dquvef2yvkf2d" path="res://scripts/enter_new_scene_interact.gd" id="5_gueqi"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_smi8u"]
+size = Vector2(68, 69)
 
 [node name="ChapterZeroScene" type="Node2D" unique_id=1345900131]
 script = ExtResource("1_4hjhq")
 
 [node name="DialogueActionable" parent="." unique_id=1751958569 instance=ExtResource("2_7cd0w")]
+position = Vector2(2022, 119)
 dialogue_resource = ExtResource("3_7cd0w")
 dialogue_cue = "beginning"
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=410593618]
 texture = ExtResource("4_10c5f")
 centered = false
+
+[node name="EnterSceneInteract" type="Area2D" parent="." unique_id=935373393]
+position = Vector2(1987, 227)
+script = ExtResource("5_gueqi")
+target_scene_path = "res://scenes/pizza_joint_location.tscn"
+metadata/_custom_type_script = "uid://bstme3dsxbcrj"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EnterSceneInteract" unique_id=831628168]
+position = Vector2(24, 24.5)
+shape = SubResource("RectangleShape2D_smi8u")
+
+[connection signal="dialogue_ended" from="DialogueActionable" to="EnterSceneInteract" method="left_click_down"]

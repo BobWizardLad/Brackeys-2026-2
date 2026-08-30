@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Brackeys Jam 2026"
-run/main_scene="uid://csbe2bhoduekt"
+run/main_scene="uid://bgctbnfv742k6"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://assets/icon.svg"
 
@@ -65,7 +65,7 @@ left_click={
 
 [internationalization]
 
-locale/translations_pot_files=PackedStringArray("res://resources/dialouge/Detective.dialogue", "res://resources/dialouge/Robot.dialogue", "res://resources/dialouge/ChapterZero.dialogue", "res://resources/dialouge/Harry.dialogue", "res://resources/dialouge/Allie.dialogue", "res://resources/dialouge/RobotFake.dialogue", "res://resources/dialouge/KitchenTutorial.dialogue", "res://resources/dialouge/untitled.dialogue")
+locale/translations_pot_files=PackedStringArray("res://resources/dialouge/Detective.dialogue", "res://resources/dialouge/Robot.dialogue", "res://resources/dialouge/ChapterZero.dialogue", "res://resources/dialouge/Harry.dialogue", "res://resources/dialouge/Allie.dialogue", "res://resources/dialouge/Homes.dialogue", "res://resources/dialouge/Jiles.dialogue", "res://resources/dialouge/Clown.dialogue", "res://resources/dialouge/Fin.dialogue", "res://resources/dialouge/Cop.dialogue", "res://resources/dialouge/RobotFake.dialogue")
 
 [layer_names]
 
